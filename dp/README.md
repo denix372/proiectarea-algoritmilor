@@ -8,7 +8,7 @@ Check off problems as you solve them.
 # **Phase 1 — Warmup & 1D Linear DP (22 problems)**
 
 ### 🔥 Standard (Core Mechanics)
-- [x] **Fibonacci Numbers** — https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/
+- [ ] **Fibonacci Numbers** — https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/
 - [ ] **Climbing Stairs** — https://leetcode.com/problems/climbing-stairs/
 - [ ] **House Robber** — https://leetcode.com/problems/house-robber/
 - [ ] **Min Cost Climbing Stairs** — https://leetcode.com/problems/min-cost-climbing-stairs/
