@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-dynamic_programming/readme" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Dynamic Programming | Proiectarea Algoritmilor</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://your-github-username.github.io/proiectarea-algoritmilor/dynamic_programming/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Dynamic Programming | Proiectarea Algoritmilor"><meta data-rh="true" name="description" content="📖 Read the Theory Roadmap"><meta data-rh="true" property="og:description" content="📖 Read the Theory Roadmap"><link data-rh="true" rel="icon" href="/proiectarea-algoritmilor/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-github-username.github.io/proiectarea-algoritmilor/dynamic_programming/"><link data-rh="true" rel="alternate" href="https://your-github-username.github.io/proiectarea-algoritmilor/dynamic_programming/" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-github-username.github.io/proiectarea-algoritmilor/dynamic_programming/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dynamic Programming","item":"https://your-github-username.github.io/proiectarea-algoritmilor/dynamic_programming/"}]}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzz00/O8D540Bq0WlB5U9U/p+1eH+T/t98BfH0G7/u8qIqL/9103C/7C2" crossorigin="anonymous"><link rel="stylesheet" href="/proiectarea-algoritmilor/assets/css/styles.98f49257.css">
+<script src="/proiectarea-algoritmilor/assets/js/runtime~main.a88bdc02.js" defer="defer"></script>
+<script src="/proiectarea-algoritmilor/assets/js/main.a5ad8240.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/proiectarea-algoritmilor/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/proiectarea-algoritmilor/"><div class="navbar__logo"><img src="/proiectarea-algoritmilor/img/logo.svg" alt="Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/proiectarea-algoritmilor/img/logo.svg" alt="Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Algorithmic Handbook</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/proiectarea-algoritmilor/data_structures/">Roadmaps</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/your-github-username/proiectarea-algoritmilor" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/data_structures/"><span class="categoryLinkLabel_W154">Data Structures</span></a><button aria-label="Expand sidebar category &#x27;Data Structures&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/common_techniques/"><span class="categoryLinkLabel_W154">Common Techniques</span></a><button aria-label="Expand sidebar category &#x27;Common Techniques&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/divide_and_conquer/"><span class="categoryLinkLabel_W154">Divide and Conquer</span></a><button aria-label="Expand sidebar category &#x27;Divide and Conquer&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/greedy_algorithms/"><span class="categoryLinkLabel_W154">Greedy</span></a><button aria-label="Expand sidebar category &#x27;Greedy&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible menu__list-item-collapsible--active"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" aria-current="page" href="/proiectarea-algoritmilor/dynamic_programming/"><span class="categoryLinkLabel_W154">Dynamic Programming</span></a><button aria-label="Collapse sidebar category &#x27;Dynamic Programming&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proiectarea-algoritmilor/dynamic_programming/theory_roadmap"><span class="linkLabel_WmDU">📖 Theory Roadmap: Dynamic Programming</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/backtracking/"><span class="categoryLinkLabel_W154">Backtracking</span></a><button aria-label="Expand sidebar category &#x27;Backtracking&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/graph_algorithms/"><span class="categoryLinkLabel_W154">Graphs</span></a><button aria-label="Expand sidebar category &#x27;Graphs&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/randomized_algorithms/"><span class="categoryLinkLabel_W154">Randomized Algorithms</span></a><button aria-label="Expand sidebar category &#x27;Randomized Algorithms&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/game_algorithms/"><span class="categoryLinkLabel_W154">Game Algorithms</span></a><button aria-label="Expand sidebar category &#x27;Game Algorithms&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/heuristic_algorithms/"><span class="categoryLinkLabel_W154">Heuristic Algorithms</span></a><button aria-label="Expand sidebar category &#x27;Heuristic Algorithms&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/proiectarea-algoritmilor/"><span class="linkLabel_WmDU">Professional Algorithmic Handbook</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/proiectarea-algoritmilor/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Dynamic Programming</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Dynamic Programming — Complete Roadmap (150+ Problems)</h1></header>
+<p><a class="" href="/proiectarea-algoritmilor/dynamic_programming/theory_roadmap">📖 Read the Theory Roadmap</a></p>
+<p>This is the complete list of all DP problems, organized by types, with links to sources (LeetCode, GFG, CSES).
+Use the GitHub Issue for tracking progress.</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-1-warmup--1d-linear-dp">PATTERN 1: Warmup &amp; 1D Linear DP<a href="#pattern-1-warmup--1d-linear-dp" class="hash-link" aria-label="Direct link to PATTERN 1: Warmup &amp; 1D Linear DP" title="Direct link to PATTERN 1: Warmup &amp; 1D Linear DP" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard">🔥 Standard<a href="#-standard" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/fibonacci-number/description/" target="_blank" rel="noopener noreferrer" class="">Fibonacci Numbers — Leetcode 509</a></li>
+<li class=""><a href="https://leetcode.com/problems/climbing-stairs/" target="_blank" rel="noopener noreferrer" class="">Climbing Stairs — Leetcode 70</a></li>
+<li class=""><a href="https://leetcode.com/problems/maximum-subarray/description/" target="_blank" rel="noopener noreferrer" class="">Maximum Subarray - Leetcode 53</a></li>
+<li class=""><a href="https://leetcode.com/problems/house-robber/" target="_blank" rel="noopener noreferrer" class="">House Robber — Leetcode 198</a></li>
+<li class=""><a href="https://leetcode.com/problems/min-cost-climbing-stairs/" target="_blank" rel="noopener noreferrer" class="">Min Cost Climbing Stairs — Leetcode 746</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice">🧩 Practice<a href="#-practice" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/n-th-tribonacci-number/" target="_blank" rel="noopener noreferrer" class="">Tribonacci — Leetcode 1137</a></li>
+<li class=""><a href="https://leetcode.com/problems/decode-ways/" target="_blank" rel="noopener noreferrer" class="">Decode Ways — LeetCode 91</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-cost-for-tickets/" target="_blank" rel="noopener noreferrer" class="">Minimum Cost Tickets — Leetcode 983</a></li>
+<li class=""><a href="https://leetcode.com/problems/solving-questions-with-brainpower/" target="_blank" rel="noopener noreferrer" class="">Brainpower</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-time-to-make-rope-colorful/" target="_blank" rel="noopener noreferrer" class="">Rope Colorful</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1637" target="_blank" rel="noopener noreferrer" class="">Removing Digits</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/painting-fence-algorithm/" target="_blank" rel="noopener noreferrer" class="">Painting Fence</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche">🌀 Niche<a href="#-niche" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/lucas-numbers/" target="_blank" rel="noopener noreferrer" class="">Lucas Numbers</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/count-ways-reach-nth-stair-using-step-1-2-3/" target="_blank" rel="noopener noreferrer" class="">Climbing Stairs (3 Moves)</a></li>
+<li class="">Weighted Climbing Stairs — GFG</li>
+<li class=""><a href="https://leetcode.com/problems/2-keys-keyboard/" target="_blank" rel="noopener noreferrer" class="">2 Keys Keyboard</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1746" target="_blank" rel="noopener noreferrer" class="">Array Description</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/how-to-print-maximum-number-of-a-using-given-four-keys/" target="_blank" rel="noopener noreferrer" class="">Max A’s</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/find-water-in-a-glass/" target="_blank" rel="noopener noreferrer" class="">Water Overflow</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/count-derangements-permutation-such-that-no-element-appears-in-its-original-position/" target="_blank" rel="noopener noreferrer" class="">Count Derangements</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/tile-stacking-problem/" target="_blank" rel="noopener noreferrer" class="">Tile Stacking</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/ways-to-arrange-balls-such-that-adjacent-balls-are-of-different-types/" target="_blank" rel="noopener noreferrer" class="">Arrange Balls — [GFG Medium](</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-2-dp-on-grids">PATTERN 2: DP on Grids<a href="#pattern-2-dp-on-grids" class="hash-link" aria-label="Direct link to PATTERN 2: DP on Grids" title="Direct link to PATTERN 2: DP on Grids" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-1">🔥 Standard<a href="#-standard-1" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/unique-paths/" target="_blank" rel="noopener noreferrer" class="">Unique Paths</a></li>
+<li class=""><a href="https://leetcode.com/problems/unique-paths-ii/" target="_blank" rel="noopener noreferrer" class="">Unique Paths II</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-path-sum/" target="_blank" rel="noopener noreferrer" class="">Minimum Path Sum</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1638" target="_blank" rel="noopener noreferrer" class="">Grid Paths I</a></li>
+<li class=""><a href="https://leetcode.com/problems/maximal-square/" target="_blank" rel="noopener noreferrer" class="">Maximal Square</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-1">🧩 Practice<a href="#-practice-1" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/triangle/" target="_blank" rel="noopener noreferrer" class="">Triangle</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-falling-path-sum/" target="_blank" rel="noopener noreferrer" class="">Minimum Falling Path Sum</a></li>
+<li class=""><a href="https://leetcode.com/problems/count-square-submatrices-with-all-ones/" target="_blank" rel="noopener noreferrer" class="">Count Square Submatrices</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/count-possible-paths-top-left-bottom-right-nxm-matrix/" target="_blank" rel="noopener noreferrer" class="">Count All Paths in Grid — GFG</a></li>
+<li class="">Minimal Grid Path — CSES</li>
+<li class=""><a href="https://leetcode.com/problems/dungeon-game/" target="_blank" rel="noopener noreferrer" class="">Dungeon Game</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-1">🌀 Niche<a href="#-niche-1" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/out-of-boundary-paths/" target="_blank" rel="noopener noreferrer" class="">Out of Boundary Paths</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/largest-x-bordered-square-in-a-matrix/" target="_blank" rel="noopener noreferrer" class="">Largest X Bordered Square</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/maximum-sum-rectangle-in-a-2d-matrix-dp-27/" target="_blank" rel="noopener noreferrer" class="">Maximum Sum Rectangle</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-3-dp-on-strings">PATTERN 3: DP on Strings<a href="#pattern-3-dp-on-strings" class="hash-link" aria-label="Direct link to PATTERN 3: DP on Strings" title="Direct link to PATTERN 3: DP on Strings" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-2">🔥 Standard<a href="#-standard-2" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/longest-common-subsequence/" target="_blank" rel="noopener noreferrer" class="">Longest Common Subsequence</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/longest-common-substring-dp-29/" target="_blank" rel="noopener noreferrer" class="">Longest Common Substring</a></li>
+<li class=""><a href="https://leetcode.com/problems/longest-palindromic-substring/" target="_blank" rel="noopener noreferrer" class="">Longest Palindromic Substring</a></li>
+<li class=""><a href="https://leetcode.com/problems/edit-distance/" target="_blank" rel="noopener noreferrer" class="">Edit Distance</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-2">🧩 Practice<a href="#-practice-2" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/longest-palindromic-subsequence/" target="_blank" rel="noopener noreferrer" class="">Longest Palindromic Subsequence</a></li>
+<li class=""><a href="https://leetcode.com/problems/palindromic-substrings/" target="_blank" rel="noopener noreferrer" class="">Palindromic Substrings</a></li>
+<li class=""><a href="https://leetcode.com/problems/uncrossed-lines/" target="_blank" rel="noopener noreferrer" class="">Uncrossed Lines</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/" target="_blank" rel="noopener noreferrer" class="">Minimum ASCII Delete Sum</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/word-break-problem-dp-32/" target="_blank" rel="noopener noreferrer" class="">Word Break</a></li>
+<li class=""><a href="https://leetcode.com/problems/interleaving-string/" target="_blank" rel="noopener noreferrer" class="">Interleaving String</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-2">🌀 Niche<a href="#-niche-2" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/distinct-subsequences/" target="_blank" rel="noopener noreferrer" class="">Distinct Subsequences</a></li>
+<li class=""><a href="https://leetcode.com/problems/shortest-common-supersequence/" target="_blank" rel="noopener noreferrer" class="">Shortest Common Supersequence</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/minimum-insertions-to-form-a-palindrome-dp-28/" target="_blank" rel="noopener noreferrer" class="">Minimum Insertions for Palindrome</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/wildcard-pattern-matching/" target="_blank" rel="noopener noreferrer" class="">Wildcard Matching</a></li>
+<li class=""><a href="https://leetcode.com/problems/regular-expression-matching/" target="_blank" rel="noopener noreferrer" class="">Regex Matching</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/longest-repeating-and-non-overlapping-substring/" target="_blank" rel="noopener noreferrer" class="">Longest Repeating Non‑Overlapping Substring — GFG Trees</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-4-distinct-ways--combinatorics">PATTERN 4: Distinct Ways / Combinatorics<a href="#pattern-4-distinct-ways--combinatorics" class="hash-link" aria-label="Direct link to PATTERN 4: Distinct Ways / Combinatorics" title="Direct link to PATTERN 4: Distinct Ways / Combinatorics" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-3">🔥 Standard<a href="#-standard-3" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/count-number-of-ways-to-fill-a-n-x-4-grid-using-1-x-4-tiles/" target="_blank" rel="noopener noreferrer" class="">Fill n×4 Grid with 1×4 Tiles — [GFG](</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1633" target="_blank" rel="noopener noreferrer" class="">Dice Combinations</a></li>
+<li class=""><a href="https://leetcode.com/problems/combination-sum-iv/" target="_blank" rel="noopener noreferrer" class="">Combination Sum IV</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/binomial-coefficient-dp-9/" target="_blank" rel="noopener noreferrer" class="">Binomial Coefficient</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/find-number-valid-parentheses-expressions-given-length/" target="_blank" rel="noopener noreferrer" class="">Count Valid Parenthesis</a></li>
+<li class=""><a href="https://leetcode.com/problems/number-of-longest-increasing-subsequence/" target="_blank" rel="noopener noreferrer" class="">Number of LIS</a></li>
+<li class="">Number of LCS — GFG</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-3">🧩 Practice<a href="#-practice-3" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/" target="_blank" rel="noopener noreferrer" class="">Dice Rolls With Target Sum</a></li>
+<li class=""><a href="https://leetcode.com/problems/coin-change-ii/" target="_blank" rel="noopener noreferrer" class="">Coin Change II</a></li>
+<li class=""><a href="https://leetcode.com/problems/knight-probability-in-chessboard/" target="_blank" rel="noopener noreferrer" class="">Knight Probability</a></li>
+<li class=""><a href="https://leetcode.com/problems/knight-dialer/" target="_blank" rel="noopener noreferrer" class="">Knight Dialer</a></li>
+<li class=""><a href="https://leetcode.com/problems/domino-and-tromino-tiling/" target="_blank" rel="noopener noreferrer" class="">Domino &amp; Tromino Tiling</a></li>
+<li class=""><a href="https://leetcode.com/problems/student-attendance-record-ii/" target="_blank" rel="noopener noreferrer" class="">Student Attendance Record II</a></li>
+<li class=""><a href="https://leetcode.com/problems/unique-binary-search-trees/" target="_blank" rel="noopener noreferrer" class="">Unique BSTs</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/pascal-triangle/" target="_blank" rel="noopener noreferrer" class="">Pascal’s Triangle</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/find-the-nth-row-in-pascals-triangle/" target="_blank" rel="noopener noreferrer" class="">Nth Row Pascal</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-3">🌀 Niche<a href="#-niche-3" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/dice-roll-simulation/" target="_blank" rel="noopener noreferrer" class="">Dice Roll Simulation</a></li>
+<li class=""><a href="https://leetcode.com/problems/soup-servings/" target="_blank" rel="noopener noreferrer" class="">Soup Servings</a></li>
+<li class=""><a href="https://leetcode.com/problems/count-vowels-permutation/" target="_blank" rel="noopener noreferrer" class="">Count Vowels Permutation</a></li>
+<li class=""><a href="https://leetcode.com/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/" target="_blank" rel="noopener noreferrer" class="">Stay in Same Place</a></li>
+<li class="">Mountain Range — CSES</li>
+<li class=""><a href="https://www.geeksforgeeks.org/program-nth-catalan-number/" target="_blank" rel="noopener noreferrer" class="">Catalan Number</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/partition-a-set-into-two-subsets-such-that-the-difference-of-subset-sums-is-minimum/" target="_blank" rel="noopener noreferrer" class="">Ways to Partition a Set</a></li>
+<li class="">Permutations with K Inversions — GFG</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-5-knapsack-patterns">PATTERN 5: Knapsack Patterns<a href="#pattern-5-knapsack-patterns" class="hash-link" aria-label="Direct link to PATTERN 5: Knapsack Patterns" title="Direct link to PATTERN 5: Knapsack Patterns" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-4">🔥 Standard<a href="#-standard-4" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/" target="_blank" rel="noopener noreferrer" class="">0/1 Knapsack</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/unbounded-knapsack-repetition-items-allowed/" target="_blank" rel="noopener noreferrer" class="">Unbounded Knapsack</a></li>
+<li class=""><a href="https://leetcode.com/problems/coin-change/" target="_blank" rel="noopener noreferrer" class="">Coin Change</a></li>
+<li class=""><a href="https://leetcode.com/problems/partition-equal-subset-sum/" target="_blank" rel="noopener noreferrer" class="">Partition Equal Subset Sum</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1634" target="_blank" rel="noopener noreferrer" class="">Minimizing Coins</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1158" target="_blank" rel="noopener noreferrer" class="">Book Shop</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-4">🧩 Practice<a href="#-practice-4" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/perfect-squares/" target="_blank" rel="noopener noreferrer" class="">Perfect Squares</a></li>
+<li class=""><a href="https://leetcode.com/problems/target-sum/" target="_blank" rel="noopener noreferrer" class="">Target Sum</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/subset-sum-problem-dp-25/" target="_blank" rel="noopener noreferrer" class="">Subset Sum</a></li>
+<li class=""><a href="https://leetcode.com/problems/ones-and-zeroes/" target="_blank" rel="noopener noreferrer" class="">Ones and Zeroes</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1635" target="_blank" rel="noopener noreferrer" class="">Coin Combinations I</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1636" target="_blank" rel="noopener noreferrer" class="">Coin Combinations II</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1745" target="_blank" rel="noopener noreferrer" class="">Money Sums</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-4">🌀 Niche<a href="#-niche-4" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/profitable-schemes/" target="_blank" rel="noopener noreferrer" class="">Profitable Schemes</a></li>
+<li class="">Printing Items in Knapsack — GFG</li>
+<li class=""><a href="https://www.geeksforgeeks.org/cutting-a-rod-dp-13/" target="_blank" rel="noopener noreferrer" class="">Cutting a Rod</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/maximize-the-number-of-segments-of-length-p-q-and-r/" target="_blank" rel="noopener noreferrer" class="">Maximum Segments — GFG</a></li>
+<li class="">Distinct Subset Sums — GFG</li>
+<li class=""><a href="https://cses.fi/problemset/task/1093" target="_blank" rel="noopener noreferrer" class="">Two Sets II</a></li>
+<li class=""><a href="https://leetcode.com/problems/last-stone-weight-ii/" target="_blank" rel="noopener noreferrer" class="">Last Stone Weight II</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-number-of-refueling-stops/" target="_blank" rel="noopener noreferrer" class="">Refueling Stops</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-6-lis-variants">PATTERN 6: LIS Variants<a href="#pattern-6-lis-variants" class="hash-link" aria-label="Direct link to PATTERN 6: LIS Variants" title="Direct link to PATTERN 6: LIS Variants" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-5">🔥 Standard<a href="#-standard-5" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/longest-increasing-subsequence/" target="_blank" rel="noopener noreferrer" class="">LIS</a></li>
+<li class=""><a href="https://leetcode.com/problems/largest-divisible-subset/" target="_blank" rel="noopener noreferrer" class="">Largest Divisible Subset</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1145" target="_blank" rel="noopener noreferrer" class="">Increasing Subsequence (CSES)</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/minimum-number-of-jumps-to-reach-end-of-a-given-array/" target="_blank" rel="noopener noreferrer" class="">Jump Game</a></li>
+<li class=""><a href="https://leetcode.com/problems/frog-jump/" target="_blank" rel="noopener noreferrer" class="">Frog Jump — Leetcode 403</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-5">🧩 Practice<a href="#-practice-5" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/longest-common-increasing-subsequence-lcs-lis/" target="_blank" rel="noopener noreferrer" class="">LCIS</a></li>
+<li class=""><a href="https://leetcode.com/problems/count-number-of-teams/" target="_blank" rel="noopener noreferrer" class="">Count Teams</a></li>
+<li class=""><a href="https://leetcode.com/problems/partition-array-for-maximum-sum/" target="_blank" rel="noopener noreferrer" class="">Partition Array Max Sum</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/weighted-job-scheduling/" target="_blank" rel="noopener noreferrer" class="">Weighted Job Scheduling</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-5">🌀 Niche<a href="#-niche-5" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/largest-sum-of-averages/" target="_blank" rel="noopener noreferrer" class="">Largest Sum of Averages</a></li>
+<li class=""><a href="https://leetcode.com/problems/filling-bookcase-shelves/" target="_blank" rel="noopener noreferrer" class="">Bookcase Shelves</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1140" target="_blank" rel="noopener noreferrer" class="">Projects (Weighted Interval Scheduling)</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/box-stacking-problem-dp-22/" target="_blank" rel="noopener noreferrer" class="">Box Stacking</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/longest-subsequence-such-that-difference-between-adjacents-is-one" target="_blank" rel="noopener noreferrer" class="">Adjacent Difference = 1 — GFG</a></li>
+<li class="">Count AP Subsequences — GFG Hard</li>
+<li class=""><a href="https://leetcode.com/problems/russian-doll-envelopes/" target="_blank" rel="noopener noreferrer" class="">Russian Doll Envelopes</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-7-multi-state--state-machine-dp">PATTERN 7: Multi-State &amp; State Machine DP<a href="#pattern-7-multi-state--state-machine-dp" class="hash-link" aria-label="Direct link to PATTERN 7: Multi-State &amp; State Machine DP" title="Direct link to PATTERN 7: Multi-State &amp; State Machine DP" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-6">🔥 Standard<a href="#-standard-6" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/" target="_blank" rel="noopener noreferrer" class="">Best Time to Buy and Sell Stock I</a></li>
+<li class=""><a href="https://leetcode.com/problems/wiggle-subsequence/" target="_blank" rel="noopener noreferrer" class="">Wiggle Subsequence — LeetCode 376</a></li>
+<li class=""><a href="https://leetcode.com/problems/maximum-product-subarray/" target="_blank" rel="noopener noreferrer" class="">Maximum Product Subarray - LeetCode 152</a></li>
+<li class=""><a href="https://leetcode.com/problems/trapping-rain-water/" target="_blank" rel="noopener noreferrer" class="">Trapping Rain Water — LeetCode 42</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-6">🧩 Practice<a href="#-practice-6" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/" target="_blank" rel="noopener noreferrer" class="">Stock with Fee</a></li>
+<li class=""><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/" target="_blank" rel="noopener noreferrer" class="">Stock with Cooldown</a></li>
+<li class=""><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/" target="_blank" rel="noopener noreferrer" class="">Stock III</a></li>
+<li class=""><a href="https://leetcode.com/problems/paint-house/" target="_blank" rel="noopener noreferrer" class="">Paint House — LeetCode 256</a></li>
+<li class=""><a href="https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/" target="_blank" rel="noopener noreferrer" class="">Maximum Subarray Sum with One Deletion — LeetCode 1186</a></li>
+<li class="">Maximum Length of Subarray With Positive Product LeetCode 1567</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-6">🌀 Niche<a href="#-niche-6" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/" target="_blank" rel="noopener noreferrer" class="">Stock IV</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/2413" target="_blank" rel="noopener noreferrer" class="">Counting Towers</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/" target="_blank" rel="noopener noreferrer" class="">Minimum Swaps To Make Sequences Increasing — LeetCode 801</a></li>
+<li class="">Bridge and Torch — GFG Hard</li>
+<li class="">Maximum Tip Calculator — GFG Medium</li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/minimum-cost-sort-strings-using-reversal-operations-different-costs/" target="_blank" rel="noopener noreferrer" class="">Min Cost to Sort Strings by Reversals — GFG</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-8-interval-dp">PATTERN 8: Interval DP<a href="#pattern-8-interval-dp" class="hash-link" aria-label="Direct link to PATTERN 8: Interval DP" title="Direct link to PATTERN 8: Interval DP" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-7">🔥 Standard<a href="#-standard-7" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/matrix-chain-multiplication-dp-8/" target="_blank" rel="noopener noreferrer" class="">Matrix Chain Multiplication (MCM)</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/palindrome-partitioning-dp-17/" target="_blank" rel="noopener noreferrer" class="">Palindrome Partitioning</a></li>
+<li class=""><a href="https://leetcode.com/problems/burst-balloons/" target="_blank" rel="noopener noreferrer" class="">Burst Balloons</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/" target="_blank" rel="noopener noreferrer" class="">Minimum Cost Tree</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-7">🧩 Practice<a href="#-practice-7" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/boolean-parenthesization-problem-dp-37/" target="_blank" rel="noopener noreferrer" class="">Boolean Parenthesization — GFG Hard</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-score-triangulation-of-polygon/" target="_blank" rel="noopener noreferrer" class="">Polygon Triangulation</a></li>
+<li class=""><a href="https://leetcode.com/problems/guess-number-higher-or-lower-ii/" target="_blank" rel="noopener noreferrer" class="">Guess Number</a></li>
+<li class=""><a href="https://leetcode.com/problems/stone-game-vii/" target="_blank" rel="noopener noreferrer" class="">Stone Game VII</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1744" target="_blank" rel="noopener noreferrer" class="">Rectangle Cutting</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1097" target="_blank" rel="noopener noreferrer" class="">Removal Game</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/egg-dropping-puzzle-dp-11/" target="_blank" rel="noopener noreferrer" class="">Egg Dropping</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-7">🌀 Niche<a href="#-niche-7" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/printing-brackets-matrix-chain-multiplication-problem/" target="_blank" rel="noopener noreferrer" class="">Printing Brakets in MCM — GFG Hard</a></li>
+<li class=""><a href="https://leetcode.com/problems/remove-boxes/" target="_blank" rel="noopener noreferrer" class="">Remove Boxes</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-cost-to-merge-stones/" target="_blank" rel="noopener noreferrer" class="">Merge Stones</a></li>
+<li class=""><a href="https://leetcode.com/problems/strange-printer/" target="_blank" rel="noopener noreferrer" class="">Strange Printer</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/optimal-strategy-for-a-game-dp-31/" target="_blank" rel="noopener noreferrer" class="">Optimal Strategy for Game</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/painters-partition-problem/" target="_blank" rel="noopener noreferrer" class="">Painter’s Partition</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/word-wrap-problem-dp-19/" target="_blank" rel="noopener noreferrer" class="">Word Wrap</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-9-advanced-dp">PATTERN 9: Advanced DP<a href="#pattern-9-advanced-dp" class="hash-link" aria-label="Direct link to PATTERN 9: Advanced DP" title="Direct link to PATTERN 9: Advanced DP" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-8">🔥 Standard<a href="#-standard-8" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/digit-dp-introduction/" target="_blank" rel="noopener noreferrer" class="">Digit DP</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/travelling-salesman-problem-using-dynamic-programming/" target="_blank" rel="noopener noreferrer" class="">Traveling Salesman — GFG</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/2220" target="_blank" rel="noopener noreferrer" class="">Counting Numbers</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-8">🧩 Practice<a href="#-practice-8" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class="">Bitmasking &amp; DP1 — GFG Advanced</li>
+<li class=""><a href="https://cses.fi/problemset/task/1653" target="_blank" rel="noopener noreferrer" class="">Elevator Rides</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/maximum-height-of-tree-when-any-node-can-be-considered-as-root/" target="_blank" rel="noopener noreferrer" class="">Max Height of Tree when any Node can be Root — GFG</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-8">🌀 Niche<a href="#-niche-8" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://cses.fi/problemset/task/2181" target="_blank" rel="noopener noreferrer" class="">Counting Tilings</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/sum-subsets-dynamic-programming/" target="_blank" rel="noopener noreferrer" class="">SOS DP — GFG</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1749" target="_blank" rel="noopener noreferrer" class="">Increasing Subsequence II</a></li>
+</ul>
+<hr>
+<h1>TOTAL: 150+ Problems</h1></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/proiectarea-algoritmilor/greedy_algorithms/theory_roadmap"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">📖 Theory Roadmap: Greedy Algorithms</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/proiectarea-algoritmilor/dynamic_programming/theory_roadmap"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">📖 Theory Roadmap: Dynamic Programming</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#pattern-1-warmup--1d-linear-dp" class="table-of-contents__link toc-highlight">PATTERN 1: Warmup &amp; 1D Linear DP</a></li><li><a href="#pattern-2-dp-on-grids" class="table-of-contents__link toc-highlight">PATTERN 2: DP on Grids</a></li><li><a href="#pattern-3-dp-on-strings" class="table-of-contents__link toc-highlight">PATTERN 3: DP on Strings</a></li><li><a href="#pattern-4-distinct-ways--combinatorics" class="table-of-contents__link toc-highlight">PATTERN 4: Distinct Ways / Combinatorics</a></li><li><a href="#pattern-5-knapsack-patterns" class="table-of-contents__link toc-highlight">PATTERN 5: Knapsack Patterns</a></li><li><a href="#pattern-6-lis-variants" class="table-of-contents__link toc-highlight">PATTERN 6: LIS Variants</a></li><li><a href="#pattern-7-multi-state--state-machine-dp" class="table-of-contents__link toc-highlight">PATTERN 7: Multi-State &amp; State Machine DP</a></li><li><a href="#pattern-8-interval-dp" class="table-of-contents__link toc-highlight">PATTERN 8: Interval DP</a></li><li><a href="#pattern-9-advanced-dp" class="table-of-contents__link toc-highlight">PATTERN 9: Advanced DP</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Algorithmic Handbook. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

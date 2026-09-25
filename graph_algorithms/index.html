@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-graph_algorithms/readme" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Graphs | Proiectarea Algoritmilor</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://your-github-username.github.io/proiectarea-algoritmilor/graph_algorithms/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Graphs | Proiectarea Algoritmilor"><meta data-rh="true" name="description" content="📖 Read the Theory Roadmap"><meta data-rh="true" property="og:description" content="📖 Read the Theory Roadmap"><link data-rh="true" rel="icon" href="/proiectarea-algoritmilor/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-github-username.github.io/proiectarea-algoritmilor/graph_algorithms/"><link data-rh="true" rel="alternate" href="https://your-github-username.github.io/proiectarea-algoritmilor/graph_algorithms/" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-github-username.github.io/proiectarea-algoritmilor/graph_algorithms/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Graphs","item":"https://your-github-username.github.io/proiectarea-algoritmilor/graph_algorithms/"}]}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzz00/O8D540Bq0WlB5U9U/p+1eH+T/t98BfH0G7/u8qIqL/9103C/7C2" crossorigin="anonymous"><link rel="stylesheet" href="/proiectarea-algoritmilor/assets/css/styles.98f49257.css">
+<script src="/proiectarea-algoritmilor/assets/js/runtime~main.a88bdc02.js" defer="defer"></script>
+<script src="/proiectarea-algoritmilor/assets/js/main.a5ad8240.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/proiectarea-algoritmilor/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/proiectarea-algoritmilor/"><div class="navbar__logo"><img src="/proiectarea-algoritmilor/img/logo.svg" alt="Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/proiectarea-algoritmilor/img/logo.svg" alt="Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Algorithmic Handbook</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/proiectarea-algoritmilor/data_structures/">Roadmaps</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/your-github-username/proiectarea-algoritmilor" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/data_structures/"><span class="categoryLinkLabel_W154">Data Structures</span></a><button aria-label="Expand sidebar category &#x27;Data Structures&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/common_techniques/"><span class="categoryLinkLabel_W154">Common Techniques</span></a><button aria-label="Expand sidebar category &#x27;Common Techniques&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/divide_and_conquer/"><span class="categoryLinkLabel_W154">Divide and Conquer</span></a><button aria-label="Expand sidebar category &#x27;Divide and Conquer&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/greedy_algorithms/"><span class="categoryLinkLabel_W154">Greedy</span></a><button aria-label="Expand sidebar category &#x27;Greedy&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/dynamic_programming/"><span class="categoryLinkLabel_W154">Dynamic Programming</span></a><button aria-label="Expand sidebar category &#x27;Dynamic Programming&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/backtracking/"><span class="categoryLinkLabel_W154">Backtracking</span></a><button aria-label="Expand sidebar category &#x27;Backtracking&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible menu__list-item-collapsible--active"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" aria-current="page" href="/proiectarea-algoritmilor/graph_algorithms/"><span class="categoryLinkLabel_W154">Graphs</span></a><button aria-label="Collapse sidebar category &#x27;Graphs&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proiectarea-algoritmilor/graph_algorithms/theory_roadmap"><span class="linkLabel_WmDU">📖 Theory Roadmap: Graph Algorithms</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/randomized_algorithms/"><span class="categoryLinkLabel_W154">Randomized Algorithms</span></a><button aria-label="Expand sidebar category &#x27;Randomized Algorithms&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/game_algorithms/"><span class="categoryLinkLabel_W154">Game Algorithms</span></a><button aria-label="Expand sidebar category &#x27;Game Algorithms&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/heuristic_algorithms/"><span class="categoryLinkLabel_W154">Heuristic Algorithms</span></a><button aria-label="Expand sidebar category &#x27;Heuristic Algorithms&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/proiectarea-algoritmilor/"><span class="linkLabel_WmDU">Professional Algorithmic Handbook</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/proiectarea-algoritmilor/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Graphs</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>🧭 Ultimate Graph Theory Roadmap</h1></header>
+<p><a class="" href="/proiectarea-algoritmilor/graph_algorithms/theory_roadmap">📖 Read the Theory Roadmap</a></p>
+<p>This roadmap organizes all graph theory problems by Lab, Pattern, and Difficulty (Standard / Practice / Niche).<br>
+<!-- -->Every problem includes its direct link.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-1-bfs--dfs--topological-sort">SECTION 1: BFS  DFS  Topological Sort<a href="#section-1-bfs--dfs--topological-sort" class="hash-link" aria-label="Direct link to SECTION 1: BFS  DFS  Topological Sort" title="Direct link to SECTION 1: BFS  DFS  Topological Sort" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-1-simple-bfs--dfs--traversal-basics">PATTERN 1: Simple BFS / DFS &amp; Traversal Basics<a href="#pattern-1-simple-bfs--dfs--traversal-basics" class="hash-link" aria-label="Direct link to PATTERN 1: Simple BFS / DFS &amp; Traversal Basics" title="Direct link to PATTERN 1: Simple BFS / DFS &amp; Traversal Basics" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard">🔥 Standard<a href="#-standard" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/problems/bfs-traversal-of-graph/1" target="_blank" rel="noopener noreferrer" class="">BFS of Graph (GFG)</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1" target="_blank" rel="noopener noreferrer" class="">DFS of Graph (GFG)</a></li>
+<li class=""><a href="https://leetcode.com/problems/find-if-path-exists-in-graph" target="_blank" rel="noopener noreferrer" class="">Find if Path Exists in Graph</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1666" target="_blank" rel="noopener noreferrer" class="">Building Roads (CSES)</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1193" target="_blank" rel="noopener noreferrer" class="">Labyrinth (CSES)</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice">🧩 Practice<a href="#-practice" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/number-of-islands" target="_blank" rel="noopener noreferrer" class="">Number of Islands</a></li>
+<li class=""><a href="https://leetcode.com/problems/flood-fill" target="_blank" rel="noopener noreferrer" class="">Flood Fill</a></li>
+<li class=""><a href="https://leetcode.com/problems/shortest-bridge/description/" target="_blank" rel="noopener noreferrer" class="">Shortest Bridge</a></li>
+<li class=""><a href="https://leetcode.com/problems/island-perimeter" target="_blank" rel="noopener noreferrer" class="">Island Perimeter</a></li>
+<li class=""><a href="https://leetcode.com/problems/pacific-atlantic-water-flow" target="_blank" rel="noopener noreferrer" class="">Pacific Atlantic Water Flow</a></li>
+<li class=""><a href="https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero" target="_blank" rel="noopener noreferrer" class="">Reorder Routes to Make All Paths Lead to City Zero</a></li>
+<li class=""><a href="https://leetcode.com/problems/shortest-path-with-alternating-colors" target="_blank" rel="noopener noreferrer" class="">Shortest Path with Alternating Colors</a></li>
+<li class=""><a href="https://leetcode.com/problems/evaluate-division" target="_blank" rel="noopener noreferrer" class="">Evaluate Division</a></li>
+<li class=""><a href="https://leetcode.com/problems/keys-and-rooms" target="_blank" rel="noopener noreferrer" class="">Keys and Rooms</a></li>
+<li class=""><a href="https://leetcode.com/problems/word-ladder" target="_blank" rel="noopener noreferrer" class="">Word Ladder</a></li>
+<li class=""><a href="https://leetcode.com/problems/longest-increasing-path-in-a-matrix/" target="_blank" rel="noopener noreferrer" class="">Longest Increasing Path in a Matrix</a></li>
+<li class=""><a href="https://algo.monster/liteproblems/1245" target="_blank" rel="noopener noreferrer" class="">Tree Diameter</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/problems/snake-and-ladder-problem4816/1" target="_blank" rel="noopener noreferrer" class="">Snakes and Ladders</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1194" target="_blank" rel="noopener noreferrer" class="">Monsters (CSES)</a></li>
+<li class=""><a href="https://leetcode.com/problems/is-graph-bipartite" target="_blank" rel="noopener noreferrer" class="">Is Graph Bipartite—</a></li>
+<li class=""><a href="https://leetcode.com/problems/possible-bipartition" target="_blank" rel="noopener noreferrer" class="">Possible Bipartition</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche">🌀 Niche<a href="#-niche" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/detonate-the-maximum-bombs" target="_blank" rel="noopener noreferrer" class="">Detonate the Maximum Bombs</a></li>
+<li class=""><a href="https://leetcode.com/problems/get-watched-videos-by-your-friends" target="_blank" rel="noopener noreferrer" class="">Get Watched Videos by Your Friends</a></li>
+<li class=""><a href="https://leetcode.com/problems/clone-graph" target="_blank" rel="noopener noreferrer" class="">Clone Graph</a></li>
+<li class=""><a href="https://leetcode.com/problems/word-ladder-ii/" target="_blank" rel="noopener noreferrer" class="">Word Ladder II</a></li>
+<li class=""><a href="https://leetcode.com/problems/cut-off-trees-for-golf-event/" target="_blank" rel="noopener noreferrer" class="">Cut Off Trees for Golf Event</a></li>
+<li class=""><a href="https://algo.monster/liteproblems/489" target="_blank" rel="noopener noreferrer" class="">Robot Room Cleaner</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-2-degree-counting--star-graphs">PATTERN 2: Degree Counting &amp; Star Graphs<a href="#pattern-2-degree-counting--star-graphs" class="hash-link" aria-label="Direct link to PATTERN 2: Degree Counting &amp; Star Graphs" title="Direct link to PATTERN 2: Degree Counting &amp; Star Graphs" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-1">🔥 Standard<a href="#-standard-1" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/find-the-town-judge" target="_blank" rel="noopener noreferrer" class="">Find the Town Judge</a></li>
+<li class=""><a href="https://leetcode.com/problems/find-center-of-star-graph" target="_blank" rel="noopener noreferrer" class="">Find Center of Star Graph</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-1">🧩 Practice<a href="#-practice-1" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes" target="_blank" rel="noopener noreferrer" class="">Minimum Number of Vertices to Reach All Nodes</a></li>
+<li class=""><a href="https://leetcode.com/problems/maximal-network-rank" target="_blank" rel="noopener noreferrer" class="">Maximal Network Rank</a></li>
+<li class=""><a href="https://leetcode.com/problems/maximum-total-importance-of-roads" target="_blank" rel="noopener noreferrer" class="">Maximum Total Importance of Roads</a></li>
+<li class=""><a href="https://leetcode.com/problems/node-with-highest-edge-score" target="_blank" rel="noopener noreferrer" class="">Node with Highest Edge Score</a></li>
+<li class=""><a href="https://leetcode.com/problems/find-champion-ii" target="_blank" rel="noopener noreferrer" class="">Find Champion II</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-1">🌀 Niche<a href="#-niche-1" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/minimum-degree-of-a-connected-trio-in-a-graph" target="_blank" rel="noopener noreferrer" class="">Minimum Degree of a Connected Trio</a></li>
+<li class=""><a href="https://leetcode.com/problems/count-pairs-of-nodes" target="_blank" rel="noopener noreferrer" class="">Count Pairs of Nodes</a></li>
+<li class=""><a href="https://leetcode.com/problems/maximum-star-sum-of-a-graph" target="_blank" rel="noopener noreferrer" class="">Maximum Star Sum of a Graph</a></li>
+<li class=""><a href="https://leetcode.com/problems/add-edges-to-make-degrees-of-all-nodes-even" target="_blank" rel="noopener noreferrer" class="">Add Edges to Make Degrees Even</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-3-topological-sorting-kahns--dfs">PATTERN 3: Topological Sorting Kahns / DFS<a href="#pattern-3-topological-sorting-kahns--dfs" class="hash-link" aria-label="Direct link to PATTERN 3: Topological Sorting Kahns / DFS" title="Direct link to PATTERN 3: Topological Sorting Kahns / DFS" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-2">🔥 Standard<a href="#-standard-2" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/course-schedule" target="_blank" rel="noopener noreferrer" class="">Course Schedule</a></li>
+<li class=""><a href="https://leetcode.com/problems/course-schedule-ii" target="_blank" rel="noopener noreferrer" class="">Course Schedule II</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/problems/topological-sort/1" target="_blank" rel="noopener noreferrer" class="">Kahn’s Algorithm (GFG)</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1679" target="_blank" rel="noopener noreferrer" class="">Course Schedule (CSES)</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-2">🧩 Practice<a href="#-practice-2" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/all-paths-from-source-to-target" target="_blank" rel="noopener noreferrer" class="">All Paths from Source to Target</a></li>
+<li class=""><a href="https://leetcode.com/problems/find-eventual-safe-states" target="_blank" rel="noopener noreferrer" class="">Find Eventual Safe States</a></li>
+<li class=""><a href="https://leetcode.com/problems/course-schedule-iv" target="_blank" rel="noopener noreferrer" class="">Course Schedule IV</a></li>
+<li class=""><a href="https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies" target="_blank" rel="noopener noreferrer" class="">Find All Possible Recipes</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1680" target="_blank" rel="noopener noreferrer" class="">Longest Flight Route (CSES)</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1681" target="_blank" rel="noopener noreferrer" class="">Game Routes (CSES)</a></li>
+<li class=""><a href="https://www.hellointerview.com/community/questions/alien-dictionary/cm5eh7nrh04uh838o2u70bl2w" target="_blank" rel="noopener noreferrer" class="">Alien Dictionary</a></li>
+<li class=""><a href="https://algo.monster/liteproblems/444" target="_blank" rel="noopener noreferrer" class="">Sequence Reconstruction</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-2">🌀 Niche<a href="#-niche-2" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/strange-printer-ii" target="_blank" rel="noopener noreferrer" class="">Strange Printer II</a></li>
+<li class=""><a href="https://leetcode.com/problems/build-a-matrix-with-conditions" target="_blank" rel="noopener noreferrer" class="">Build a Matrix with Conditions</a></li>
+<li class=""><a href="https://leetcode.com/problems/parallel-courses-ii" target="_blank" rel="noopener noreferrer" class="">Parallel Courses II - LeetCode 1494</a></li>
+<li class=""><a href="https://leetcode.com/problems/parallel-courses-iii" target="_blank" rel="noopener noreferrer" class="">Parallel Courses III</a></li>
+<li class=""><a href="https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph" target="_blank" rel="noopener noreferrer" class="">All Ancestors of a Node in a DAG</a></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-2-cc-scc-tarjan-cvce-kosaraju-bcc">SECTION 2: CC, SCC, Tarjan CV/CE, Kosaraju, BCC<a href="#section-2-cc-scc-tarjan-cvce-kosaraju-bcc" class="hash-link" aria-label="Direct link to SECTION 2: CC, SCC, Tarjan CV/CE, Kosaraju, BCC" title="Direct link to SECTION 2: CC, SCC, Tarjan CV/CE, Kosaraju, BCC" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-1-simple-connected-components-cc">PATTERN 1: Simple Connected Components CC<a href="#pattern-1-simple-connected-components-cc" class="hash-link" aria-label="Direct link to PATTERN 1: Simple Connected Components CC" title="Direct link to PATTERN 1: Simple Connected Components CC" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-3">🔥 Standard<a href="#-standard-3" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://algo.monster/liteproblems/323" target="_blank" rel="noopener noreferrer" class="">Number of Connected Components in an Undirected Graph</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1192" target="_blank" rel="noopener noreferrer" class="">Counting Rooms (CSES)</a></li>
+<li class=""><a href="https://leetcode.com/problems/max-area-of-island" target="_blank" rel="noopener noreferrer" class="">Max Area of Island</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1751" target="_blank" rel="noopener noreferrer" class="">Planets Cycles (CSES)</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-2-strongly-connected-components-scc">PATTERN 2: Strongly Connected Components SCC<a href="#pattern-2-strongly-connected-components-scc" class="hash-link" aria-label="Direct link to PATTERN 2: Strongly Connected Components SCC" title="Direct link to PATTERN 2: Strongly Connected Components SCC" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-4">🔥 Standard<a href="#-standard-4" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/problems/strongly-connected-components-kosarajus-algo/1" target="_blank" rel="noopener noreferrer" class="">SCC - Kosaraju’s Algo (GFG)</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/tarjan-algorithm-find-strongly-connected-components/" target="_blank" rel="noopener noreferrer" class="">Tarjan’s SCC Algo (GFG)</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1683" target="_blank" rel="noopener noreferrer" class="">Planets and Kingdoms (CSES)</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-3">🧩 Practice<a href="#-practice-3" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://cses.fi/problemset/task/1686" target="_blank" rel="noopener noreferrer" class="">Coin Collector (CSES)</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1682" target="_blank" rel="noopener noreferrer" class="">Flight Routes Check (CSES)</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-3">🌀 Niche<a href="#-niche-3" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://cses.fi/problemset/task/1684" target="_blank" rel="noopener noreferrer" class="">Giant Pizza (CSES 2-SAT)</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-3-cut-vertices-cv--critical-edges-ce--bridges">PATTERN 3: Cut Vertices CV &amp; Critical Edges CE / Bridges<a href="#pattern-3-cut-vertices-cv--critical-edges-ce--bridges" class="hash-link" aria-label="Direct link to PATTERN 3: Cut Vertices CV &amp; Critical Edges CE / Bridges" title="Direct link to PATTERN 3: Cut Vertices CV &amp; Critical Edges CE / Bridges" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-5">🔥 Standard<a href="#-standard-5" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/critical-connections-in-a-network" target="_blank" rel="noopener noreferrer" class="">Critical Connections (Bridges - Tarjan CE)</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/problems/articulation-point-1/1" target="_blank" rel="noopener noreferrer" class="">Articulation Points (Tarjan CV)</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/problems/bridge-edge-in-graph/1" target="_blank" rel="noopener noreferrer" class="">Bridges in a Graph (GFG)</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-4-biconnected-components-bcc">PATTERN 4: Biconnected Components BCC<a href="#pattern-4-biconnected-components-bcc" class="hash-link" aria-label="Direct link to PATTERN 4: Biconnected Components BCC" title="Direct link to PATTERN 4: Biconnected Components BCC" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-6">🔥 Standard<a href="#-standard-6" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/biconnectivity-in-a-graph/" target="_blank" rel="noopener noreferrer" class="">Biconnectivity in a graph (GFG)</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/biconnected-components/" target="_blank" rel="noopener noreferrer" class="">Biconnected Components (GFG)</a></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-3-shortest-path-i--dijkstra--bellman-ford">SECTION 3: Shortest Path I  Dijkstra &amp; Bellman-Ford<a href="#section-3-shortest-path-i--dijkstra--bellman-ford" class="hash-link" aria-label="Direct link to SECTION 3: Shortest Path I  Dijkstra &amp; Bellman-Ford" title="Direct link to SECTION 3: Shortest Path I  Dijkstra &amp; Bellman-Ford" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-1-dijkstras-algorithm">PATTERN 1: Dijkstras Algorithm<a href="#pattern-1-dijkstras-algorithm" class="hash-link" aria-label="Direct link to PATTERN 1: Dijkstras Algorithm" title="Direct link to PATTERN 1: Dijkstras Algorithm" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-7">🔥 Standard<a href="#-standard-7" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/network-delay-time" target="_blank" rel="noopener noreferrer" class="">Network Delay Time</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1671" target="_blank" rel="noopener noreferrer" class="">Shortest Routes I (CSES)</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1" target="_blank" rel="noopener noreferrer" class="">Dijkstra’s Shortest Path (GFG)</a></li>
+<li class=""><a href="https://leetcode.com/problems/swim-in-rising-water/" target="_blank" rel="noopener noreferrer" class="">Swim in Rising Water</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-4">🧩 Practice<a href="#-practice-4" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/path-with-maximum-probability" target="_blank" rel="noopener noreferrer" class="">Path with Maximum Probability</a></li>
+<li class=""><a href="https://leetcode.com/problems/path-with-minimum-effort/" target="_blank" rel="noopener noreferrer" class="">Path With Minimum Effort</a></li>
+<li class=""><a href="https://algo.monster/liteproblems/1102" target="_blank" rel="noopener noreferrer" class="">Path With Maximum Minimum Value</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time" target="_blank" rel="noopener noreferrer" class="">Minimum Cost to reach destination in time</a></li>
+<li class=""><a href="https://leetcode.com/problems/number-of-ways-to-arrive-at-destination" target="_blank" rel="noopener noreferrer" class="">Number of ways to arrive at destination</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1202" target="_blank" rel="noopener noreferrer" class="">Investigation (CSES)</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1195" target="_blank" rel="noopener noreferrer" class="">Flight Discount (CSES)</a></li>
+<li class=""><a href="https://leetcode.com/problems/design-graph-with-shortest-path-calculator" target="_blank" rel="noopener noreferrer" class="">Design Graph with Shortest Path Calculator</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-4">🌀 Niche<a href="#-niche-4" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/second-minimum-time-to-reach-destination" target="_blank" rel="noopener noreferrer" class="">Second Minimum Time to Reach Destination</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-weighted-subgraph-with-the-required-paths" target="_blank" rel="noopener noreferrer" class="">Minimum weighted subgraph with required paths</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-2-bellman-ford--negative-cycles">PATTERN 2: Bellman-Ford &amp; Negative Cycles<a href="#pattern-2-bellman-ford--negative-cycles" class="hash-link" aria-label="Direct link to PATTERN 2: Bellman-Ford &amp; Negative Cycles" title="Direct link to PATTERN 2: Bellman-Ford &amp; Negative Cycles" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-8">🔥 Standard<a href="#-standard-8" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/1" target="_blank" rel="noopener noreferrer" class="">Bellman-Ford Algorithm (GFG)</a></li>
+<li class=""><a href="https://leetcode.com/problems/cheapest-flights-within-k-stops" target="_blank" rel="noopener noreferrer" class="">Cheapest Flights Within K Stops</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1673" target="_blank" rel="noopener noreferrer" class="">High Score (CSES)</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-5">🧩 Practice<a href="#-practice-5" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://cses.fi/problemset/task/1197" target="_blank" rel="noopener noreferrer" class="">Cycle Finding (CSES)</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-3-1-bfs--multi-source-bfs">PATTERN 3: 1 BFS &amp; Multi-Source BFS<a href="#pattern-3-1-bfs--multi-source-bfs" class="hash-link" aria-label="Direct link to PATTERN 3: 1 BFS &amp; Multi-Source BFS" title="Direct link to PATTERN 3: 1 BFS &amp; Multi-Source BFS" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-9">🔥 Standard<a href="#-standard-9" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/rotting-oranges" target="_blank" rel="noopener noreferrer" class="">Rotting Oranges</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1667" target="_blank" rel="noopener noreferrer" class="">Message Route (CSES)</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/minimum-edges-reverse-make-path-source-destination/" target="_blank" rel="noopener noreferrer" class="">Minimum edges to reverse to make path - GFG</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner" target="_blank" rel="noopener noreferrer" class="">Minimum Obstacle Removal to Reach Corner</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-6">🧩 Practice<a href="#-practice-6" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/minimum-height-trees" target="_blank" rel="noopener noreferrer" class="">Minimum Height Trees</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid" target="_blank" rel="noopener noreferrer" class="">Minimum Cost to make at least one valid path</a></li>
+<li class=""><a href="https://leetcode.com/problems/maximum-candies-you-can-get-from-boxes" target="_blank" rel="noopener noreferrer" class="">Maximum Candies You Can Get From Boxes</a></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-4-shortest-path-ii--roy-floyd--johnson">SECTION 4: Shortest Path II  Roy-Floyd &amp; Johnson<a href="#section-4-shortest-path-ii--roy-floyd--johnson" class="hash-link" aria-label="Direct link to SECTION 4: Shortest Path II  Roy-Floyd &amp; Johnson" title="Direct link to SECTION 4: Shortest Path II  Roy-Floyd &amp; Johnson" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-1-roy-floyd-warshall-apsp">PATTERN 1: Roy-Floyd-Warshall APSP<a href="#pattern-1-roy-floyd-warshall-apsp" class="hash-link" aria-label="Direct link to PATTERN 1: Roy-Floyd-Warshall APSP" title="Direct link to PATTERN 1: Roy-Floyd-Warshall APSP" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-10">🔥 Standard<a href="#-standard-10" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/floyd-warshall-algorithm-dp-16/" target="_blank" rel="noopener noreferrer" class="">Floyd-Warshall Algorithm (GFG)</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1672" target="_blank" rel="noopener noreferrer" class="">Shortest Routes II (CSES)</a></li>
+<li class=""><a href="https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance" target="_blank" rel="noopener noreferrer" class="">Find the city with smallest number of neighbors</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-7">🧩 Practice<a href="#-practice-7" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/minimum-cost-to-convert-string-i" target="_blank" rel="noopener noreferrer" class="">Minimum Cost to Convert String I &amp; II</a></li>
+<li class=""><a href="https://leetcode.com/problems/count-the-number-of-houses-at-a-certain-distance-i" target="_blank" rel="noopener noreferrer" class="">Count the number of houses at a certain distance I</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-5">🌀 Niche<a href="#-niche-5" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/number-of-possible-sets-of-closing-branches" target="_blank" rel="noopener noreferrer" class="">Number of possible sets of closing branches</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/transitive-closure-of-a-graph/" target="_blank" rel="noopener noreferrer" class="">Transitive Closure of a Graph (GFG)</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-2-johnsons-algorithm">PATTERN 2: Johnsons Algorithm<a href="#pattern-2-johnsons-algorithm" class="hash-link" aria-label="Direct link to PATTERN 2: Johnsons Algorithm" title="Direct link to PATTERN 2: Johnsons Algorithm" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-11">🔥 Standard<a href="#-standard-11" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/johnsons-algorithm/" target="_blank" rel="noopener noreferrer" class="">Johnson’s Algorithm (GFG)</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-5-minimum-spanning-trees-mst--dsu">SECTION 5: Minimum Spanning Trees MST &amp; DSU<a href="#section-5-minimum-spanning-trees-mst--dsu" class="hash-link" aria-label="Direct link to SECTION 5: Minimum Spanning Trees MST &amp; DSU" title="Direct link to SECTION 5: Minimum Spanning Trees MST &amp; DSU" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-1-kruskals--dsu">PATTERN 1: Kruskals &amp; DSU<a href="#pattern-1-kruskals--dsu" class="hash-link" aria-label="Direct link to PATTERN 1: Kruskals &amp; DSU" title="Direct link to PATTERN 1: Kruskals &amp; DSU" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-12">🔥 Standard<a href="#-standard-12" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/problems/minimum-spanning-tree/1" target="_blank" rel="noopener noreferrer" class="">Kruskal’s MST (GFG)</a></li>
+<li class=""><a href="https://algo.monster/liteproblems/1135" target="_blank" rel="noopener noreferrer" class="">Connecting Cities With Minimum Cost</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1675" target="_blank" rel="noopener noreferrer" class="">Road Reparation (CSES)</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-8">🧩 Practice<a href="#-practice-8" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/number-of-provinces" target="_blank" rel="noopener noreferrer" class="">Number of Provinces (DSU Version)</a></li>
+<li class=""><a href="https://leetcode.com/problems/accounts-merge/" target="_blank" rel="noopener noreferrer" class="">Accounts Merge</a></li>
+<li class=""><a href="https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/" target="_blank" rel="noopener noreferrer" class="">Most Stones Removed with Same Row or Column</a></li>
+<li class=""><a href="https://leetcode.com/problems/number-of-operations-to-make-network-connected/" target="_blank" rel="noopener noreferrer" class="">Number of Operations to Make Network Connected</a></li>
+<li class=""><a href="https://leetcode.com/problems/redundant-connection" target="_blank" rel="noopener noreferrer" class="">Redundant Connection</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1676" target="_blank" rel="noopener noreferrer" class="">Road Construction (CSES)</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-13">🔥 Standard<a href="#-standard-13" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree" target="_blank" rel="noopener noreferrer" class="">Find Critical and Pseudo-Critical Edges</a></li>
+<li class=""><a href="https://leetcode.com/problems/largest-component-size-by-common-factor/" target="_blank" rel="noopener noreferrer" class="">Largest Component Size by Common Factor</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-2-prims-algorithm">PATTERN 2: Prims Algorithm<a href="#pattern-2-prims-algorithm" class="hash-link" aria-label="Direct link to PATTERN 2: Prims Algorithm" title="Direct link to PATTERN 2: Prims Algorithm" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-9">🧩 Practice<a href="#-practice-9" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/problems/minimum-spanning-tree/1" target="_blank" rel="noopener noreferrer" class="">Prim’s MST (GFG)</a></li>
+<li class=""><a href="https://leetcode.com/problems/min-cost-to-connect-all-points" target="_blank" rel="noopener noreferrer" class="">Min Cost to Connect All Points</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-14">🔥 Standard<a href="#-standard-14" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/minimum-cost-connect-cities/" target="_blank" rel="noopener noreferrer" class="">Minimum cost to connect all cities</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-10">🧩 Practice<a href="#-practice-10" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/minimum-product-spanning-tree/" target="_blank" rel="noopener noreferrer" class="">Minimum product spanning tree (GFG)</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-3-advanced-disjoint-set-union-dsu">PATTERN 3: Advanced Disjoint Set Union DSU<a href="#pattern-3-advanced-disjoint-set-union-dsu" class="hash-link" aria-label="Direct link to PATTERN 3: Advanced Disjoint Set Union DSU" title="Direct link to PATTERN 3: Advanced Disjoint Set Union DSU" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-6">🌀 Niche<a href="#-niche-6" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.ca/all/261.html" target="_blank" rel="noopener noreferrer" class="">Graph Valid Tree - LeetCode 261</a></li>
+<li class=""><a href="https://leetcode.com/problems/satisfiability-of-equality-equations" target="_blank" rel="noopener noreferrer" class="">Satisfiability of Equality Equations - LeetCode 990</a></li>
+<li class=""><a href="https://leetcode.com/problems/smallest-string-with-swaps" target="_blank" rel="noopener noreferrer" class="">Smallest String With Swaps - LeetCode 1202</a></li>
+<li class=""><a href="https://leetcode.com/problems/regions-cut-by-slashes" target="_blank" rel="noopener noreferrer" class="">Regions Cut By Slashes - LeetCode 959</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-15">🔥 Standard<a href="#-standard-15" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/lexicographically-smallest-equivalent-string" target="_blank" rel="noopener noreferrer" class="">Lexicographically Smallest Equivalent String - LeetCode 1061</a></li>
+<li class=""><a href="https://leetcode.com/problems/the-earliest-moment-when-everyone-become-friends" target="_blank" rel="noopener noreferrer" class="">The Earliest Moment When Everyone Become Friends - LeetCode 1101</a></li>
+<li class=""><a href="https://leetcode.ca/all/737.html" target="_blank" rel="noopener noreferrer" class="">Sentence Similarity II - LeetCode 737</a></li>
+<li class=""><a href="https://leetcode.ca/2019-05-11-1258-Synonymous-Sentences/" target="_blank" rel="noopener noreferrer" class="">Synonymous Sentences - LeetCode 1258</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-11">🧩 Practice<a href="#-practice-11" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable" target="_blank" rel="noopener noreferrer" class="">Remove Max Number of Edges to Keep Graph Fully Traversable - LeetCode 1579</a></li>
+<li class=""><a href="https://leetcode.com/problems/checking-existence-of-edge-length-limited-paths" target="_blank" rel="noopener noreferrer" class="">Checking Existence of Edge Length Limited Paths - LeetCode 1697</a></li>
+<li class=""><a href="https://leetcode.com/problems/similar-string-groups" target="_blank" rel="noopener noreferrer" class="">Similar String Groups - LeetCode 839</a></li>
+<li class=""><a href="https://leetcode.com/problems/number-of-islands-ii" target="_blank" rel="noopener noreferrer" class="">Number of Islands II - LeetCode 305</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimize-malware-spread" target="_blank" rel="noopener noreferrer" class="">Minimize Malware Spread - LeetCode 924</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimize-malware-spread-ii" target="_blank" rel="noopener noreferrer" class="">Minimize Malware Spread II - LeetCode 928</a></li>
+<li class=""><a href="https://leetcode.com/problems/number-of-distinct-islands-ii" target="_blank" rel="noopener noreferrer" class="">Number of Distinct Islands II - LeetCode 711</a></li>
+<li class=""><a href="https://leetcode.com/problems/graph-connectivity-with-threshold" target="_blank" rel="noopener noreferrer" class="">Graph Connectivity With Threshold - LeetCode 1627</a></li>
+<li class=""><a href="https://leetcode.com/problems/data-stream-as-disjoint-intervals" target="_blank" rel="noopener noreferrer" class="">Data Stream as Disjoint Intervals - LeetCode 352</a></li>
+<li class=""><a href="https://leetcode.com/problems/rank-transform-of-a-matrix" target="_blank" rel="noopener noreferrer" class="">Rank Transform of a Matrix - LeetCode 1632</a></li>
+<li class=""><a href="https://leetcode.com/problems/contain-virus" target="_blank" rel="noopener noreferrer" class="">Contain Virus - LeetCode 749</a></li>
+<li class=""><a href="https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other" target="_blank" rel="noopener noreferrer" class="">Number of Ways to Wear Different Hats to Each Other - LeetCode 1434</a></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-6-flow--max-flow-min-cut--connectivity">SECTION 6: Flow  Max Flow, Min Cut &amp; Connectivity<a href="#section-6-flow--max-flow-min-cut--connectivity" class="hash-link" aria-label="Direct link to SECTION 6: Flow  Max Flow, Min Cut &amp; Connectivity" title="Direct link to SECTION 6: Flow  Max Flow, Min Cut &amp; Connectivity" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-1-classic-max-flow-ford-fulkerson-edmonds-karp-push-relabel">PATTERN 1: Classic Max Flow Ford-Fulkerson, Edmonds-Karp, Push-Relabel<a href="#pattern-1-classic-max-flow-ford-fulkerson-edmonds-karp-push-relabel" class="hash-link" aria-label="Direct link to PATTERN 1: Classic Max Flow Ford-Fulkerson, Edmonds-Karp, Push-Relabel" title="Direct link to PATTERN 1: Classic Max Flow Ford-Fulkerson, Edmonds-Karp, Push-Relabel" translate="no">​</a></h3>
+<p><em>Concept: Pushing flow from Source to Sink along augmenting paths.</em></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-7">🌀 Niche<a href="#-niche-7" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/" target="_blank" rel="noopener noreferrer" class="">Ford-Fulkerson Algorithm for Maximum Flow - GFG</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/push-relabel-algorithm-set-1-introduction-and-illustration/" target="_blank" rel="noopener noreferrer" class="">Push-Relabel Algorithm - GFG</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1694" target="_blank" rel="noopener noreferrer" class="">Download Speed - CSES 1694</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-2-minimum-cut--edge-cut">PATTERN 2: Minimum Cut / Edge Cut<a href="#pattern-2-minimum-cut--edge-cut" class="hash-link" aria-label="Direct link to PATTERN 2: Minimum Cut / Edge Cut" title="Direct link to PATTERN 2: Minimum Cut / Edge Cut" translate="no">​</a></h3>
+<p><em>Concept: By the Max-Flow Min-Cut theorem, the maximum flow equals the capacity of the minimum cut.</em></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-16">🔥 Standard<a href="#-standard-16" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/minimum-cut-in-a-directed-graph/" target="_blank" rel="noopener noreferrer" class="">Minimum Cut in a Directed Graph - GFG</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-12">🧩 Practice<a href="#-practice-12" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://cses.fi/problemset/task/1695" target="_blank" rel="noopener noreferrer" class="">Police Chase - CSES 1695</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-3-maximum-bipartite-matching">PATTERN 3: Maximum Bipartite Matching<a href="#pattern-3-maximum-bipartite-matching" class="hash-link" aria-label="Direct link to PATTERN 3: Maximum Bipartite Matching" title="Direct link to PATTERN 3: Maximum Bipartite Matching" translate="no">​</a></h3>
+<p><em>Concept: Connect a super-source to set A and super-sink to set B with an edge capacity of 1, then run a flow algorithm.</em></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-8">🌀 Niche<a href="#-niche-8" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/maximum-bipartite-matching/" target="_blank" rel="noopener noreferrer" class="">Maximum Bipartite Matching - GFG</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1696" target="_blank" rel="noopener noreferrer" class="">School Dance - CSES 1696</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-17">🔥 Standard<a href="#-standard-17" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/hopcroft-karp-algorithm-for-maximum-matching-set-1-introduction/" target="_blank" rel="noopener noreferrer" class="">Hopcroft Karp Algorithm - GFG</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-4-edge-disjoint-paths--edge-connectivity">PATTERN 4: Edge-Disjoint Paths &amp; Edge Connectivity<a href="#pattern-4-edge-disjoint-paths--edge-connectivity" class="hash-link" aria-label="Direct link to PATTERN 4: Edge-Disjoint Paths &amp; Edge Connectivity" title="Direct link to PATTERN 4: Edge-Disjoint Paths &amp; Edge Connectivity" translate="no">​</a></h3>
+<p><em>Concept: Assign capacity 1 to all edges. The max flow equals the max number of edge-disjoint paths or the minimum edges to disconnect the graph.</em></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-13">🧩 Practice<a href="#-practice-13" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/find-edge-disjoint-paths-two-vertices/" target="_blank" rel="noopener noreferrer" class="">Find Edge Disjoint Paths - GFG</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-18">🔥 Standard<a href="#-standard-18" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://cses.fi/problemset/task/1711" target="_blank" rel="noopener noreferrer" class="">Distinct Routes - CSES 1711</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/minimum-number-of-edges-to-be-removed-from-a-given-graph-to-disconnect-it/" target="_blank" rel="noopener noreferrer" class="">Minimum Number of Edges to Disconnect Graph - GFG</a></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-5-vertex-cut--vertex-disjoint-paths-node-splitting">PATTERN 5: Vertex Cut &amp; Vertex-Disjoint Paths Node Splitting<a href="#pattern-5-vertex-cut--vertex-disjoint-paths-node-splitting" class="hash-link" aria-label="Direct link to PATTERN 5: Vertex Cut &amp; Vertex-Disjoint Paths Node Splitting" title="Direct link to PATTERN 5: Vertex Cut &amp; Vertex-Disjoint Paths Node Splitting" translate="no">​</a></h3>
+<p><em>Concept: To constrain node capacity, split each vertex <code>v</code> into <code>v_in</code> and <code>v_out</code> with a directional edge between them of capacity 1.</em></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-14">🧩 Practice<a href="#-practice-14" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/find-maximum-number-of-vertex-disjoint-paths-in-a-graph/" target="_blank" rel="noopener noreferrer" class="">Find Maximum Number of Vertex-Disjoint Paths - GFG</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-19">🔥 Standard<a href="#-standard-19" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class="">Minimum Vertex Cut (Node Splitting approach)</li>
+<li class="">Network Connectivity (Vertex Version)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-7-advanced--rare-topics-euler-tsp-game-theory">SECTION 7: Advanced / Rare Topics Euler, TSP, Game Theory<a href="#section-7-advanced--rare-topics-euler-tsp-game-theory" class="hash-link" aria-label="Direct link to SECTION 7: Advanced / Rare Topics Euler, TSP, Game Theory" title="Direct link to SECTION 7: Advanced / Rare Topics Euler, TSP, Game Theory" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-1-euler-circuits--paths">PATTERN 1: Euler Circuits &amp; Paths<a href="#pattern-1-euler-circuits--paths" class="hash-link" aria-label="Direct link to PATTERN 1: Euler Circuits &amp; Paths" title="Direct link to PATTERN 1: Euler Circuits &amp; Paths" translate="no">​</a></h3>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/reconstruct-itinerary" target="_blank" rel="noopener noreferrer" class="">Reconstruct Itinerary</a></li>
+<li class=""><a href="https://leetcode.com/problems/valid-arrangement-of-pairs" target="_blank" rel="noopener noreferrer" class="">Valid Arrangement of Pairs</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1691" target="_blank" rel="noopener noreferrer" class="">Mail Delivery (CSES)</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1693" target="_blank" rel="noopener noreferrer" class="">Teleporters Path (CSES)</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-2-game-theory--cycles-hamiltoniantsp">PATTERN 2: Game Theory &amp; Cycles Hamiltonian/TSP<a href="#pattern-2-game-theory--cycles-hamiltoniantsp" class="hash-link" aria-label="Direct link to PATTERN 2: Game Theory &amp; Cycles Hamiltonian/TSP" title="Direct link to PATTERN 2: Game Theory &amp; Cycles Hamiltonian/TSP" translate="no">​</a></h3>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/cat-and-mouse" target="_blank" rel="noopener noreferrer" class="">Cat and Mouse I &amp; II</a></li>
+<li class=""><a href="https://leetcode.com/problems/shortest-path-visiting-all-nodes" target="_blank" rel="noopener noreferrer" class="">Shortest Path Visiting All Nodes (TSP)</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/problems/travelling-salesman-problem2732/1" target="_blank" rel="noopener noreferrer" class="">Traveling Salesman Problem (GFG)</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1690" target="_blank" rel="noopener noreferrer" class="">Hamiltonian Flights (CSES)</a></li>
+<li class=""><a href="https://cses.fi/problemset/task/1689" target="_blank" rel="noopener noreferrer" class="">Knight&#x27;s Tour (CSES)</a></li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/proiectarea-algoritmilor/backtracking/theory_roadmap"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">📖 Theory Roadmap: Backtracking</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/proiectarea-algoritmilor/graph_algorithms/theory_roadmap"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">📖 Theory Roadmap: Graph Algorithms</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#section-1-bfs--dfs--topological-sort" class="table-of-contents__link toc-highlight">SECTION 1: BFS  DFS  Topological Sort</a><ul><li><a href="#pattern-1-simple-bfs--dfs--traversal-basics" class="table-of-contents__link toc-highlight">PATTERN 1: Simple BFS / DFS &amp; Traversal Basics</a></li><li><a href="#pattern-2-degree-counting--star-graphs" class="table-of-contents__link toc-highlight">PATTERN 2: Degree Counting &amp; Star Graphs</a></li><li><a href="#pattern-3-topological-sorting-kahns--dfs" class="table-of-contents__link toc-highlight">PATTERN 3: Topological Sorting Kahns / DFS</a></li></ul></li><li><a href="#section-2-cc-scc-tarjan-cvce-kosaraju-bcc" class="table-of-contents__link toc-highlight">SECTION 2: CC, SCC, Tarjan CV/CE, Kosaraju, BCC</a><ul><li><a href="#pattern-1-simple-connected-components-cc" class="table-of-contents__link toc-highlight">PATTERN 1: Simple Connected Components CC</a></li><li><a href="#pattern-2-strongly-connected-components-scc" class="table-of-contents__link toc-highlight">PATTERN 2: Strongly Connected Components SCC</a></li><li><a href="#pattern-3-cut-vertices-cv--critical-edges-ce--bridges" class="table-of-contents__link toc-highlight">PATTERN 3: Cut Vertices CV &amp; Critical Edges CE / Bridges</a></li><li><a href="#pattern-4-biconnected-components-bcc" class="table-of-contents__link toc-highlight">PATTERN 4: Biconnected Components BCC</a></li></ul></li><li><a href="#section-3-shortest-path-i--dijkstra--bellman-ford" class="table-of-contents__link toc-highlight">SECTION 3: Shortest Path I  Dijkstra &amp; Bellman-Ford</a><ul><li><a href="#pattern-1-dijkstras-algorithm" class="table-of-contents__link toc-highlight">PATTERN 1: Dijkstras Algorithm</a></li><li><a href="#pattern-2-bellman-ford--negative-cycles" class="table-of-contents__link toc-highlight">PATTERN 2: Bellman-Ford &amp; Negative Cycles</a></li><li><a href="#pattern-3-1-bfs--multi-source-bfs" class="table-of-contents__link toc-highlight">PATTERN 3: 1 BFS &amp; Multi-Source BFS</a></li></ul></li><li><a href="#section-4-shortest-path-ii--roy-floyd--johnson" class="table-of-contents__link toc-highlight">SECTION 4: Shortest Path II  Roy-Floyd &amp; Johnson</a><ul><li><a href="#pattern-1-roy-floyd-warshall-apsp" class="table-of-contents__link toc-highlight">PATTERN 1: Roy-Floyd-Warshall APSP</a></li><li><a href="#pattern-2-johnsons-algorithm" class="table-of-contents__link toc-highlight">PATTERN 2: Johnsons Algorithm</a></li></ul></li><li><a href="#section-5-minimum-spanning-trees-mst--dsu" class="table-of-contents__link toc-highlight">SECTION 5: Minimum Spanning Trees MST &amp; DSU</a><ul><li><a href="#pattern-1-kruskals--dsu" class="table-of-contents__link toc-highlight">PATTERN 1: Kruskals &amp; DSU</a></li><li><a href="#pattern-2-prims-algorithm" class="table-of-contents__link toc-highlight">PATTERN 2: Prims Algorithm</a></li><li><a href="#pattern-3-advanced-disjoint-set-union-dsu" class="table-of-contents__link toc-highlight">PATTERN 3: Advanced Disjoint Set Union DSU</a></li></ul></li><li><a href="#section-6-flow--max-flow-min-cut--connectivity" class="table-of-contents__link toc-highlight">SECTION 6: Flow  Max Flow, Min Cut &amp; Connectivity</a><ul><li><a href="#pattern-1-classic-max-flow-ford-fulkerson-edmonds-karp-push-relabel" class="table-of-contents__link toc-highlight">PATTERN 1: Classic Max Flow Ford-Fulkerson, Edmonds-Karp, Push-Relabel</a></li><li><a href="#pattern-2-minimum-cut--edge-cut" class="table-of-contents__link toc-highlight">PATTERN 2: Minimum Cut / Edge Cut</a></li><li><a href="#pattern-3-maximum-bipartite-matching" class="table-of-contents__link toc-highlight">PATTERN 3: Maximum Bipartite Matching</a></li><li><a href="#pattern-4-edge-disjoint-paths--edge-connectivity" class="table-of-contents__link toc-highlight">PATTERN 4: Edge-Disjoint Paths &amp; Edge Connectivity</a></li><li><a href="#pattern-5-vertex-cut--vertex-disjoint-paths-node-splitting" class="table-of-contents__link toc-highlight">PATTERN 5: Vertex Cut &amp; Vertex-Disjoint Paths Node Splitting</a></li></ul></li><li><a href="#section-7-advanced--rare-topics-euler-tsp-game-theory" class="table-of-contents__link toc-highlight">SECTION 7: Advanced / Rare Topics Euler, TSP, Game Theory</a><ul><li><a href="#pattern-1-euler-circuits--paths" class="table-of-contents__link toc-highlight">PATTERN 1: Euler Circuits &amp; Paths</a></li><li><a href="#pattern-2-game-theory--cycles-hamiltoniantsp" class="table-of-contents__link toc-highlight">PATTERN 2: Game Theory &amp; Cycles Hamiltonian/TSP</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Algorithmic Handbook. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

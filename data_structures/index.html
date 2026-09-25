@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-data_structures/readme" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Data Structures | Proiectarea Algoritmilor</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://your-github-username.github.io/proiectarea-algoritmilor/data_structures/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Data Structures | Proiectarea Algoritmilor"><meta data-rh="true" name="description" content="📖 Read the Theory Roadmap"><meta data-rh="true" property="og:description" content="📖 Read the Theory Roadmap"><link data-rh="true" rel="icon" href="/proiectarea-algoritmilor/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-github-username.github.io/proiectarea-algoritmilor/data_structures/"><link data-rh="true" rel="alternate" href="https://your-github-username.github.io/proiectarea-algoritmilor/data_structures/" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-github-username.github.io/proiectarea-algoritmilor/data_structures/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Data Structures","item":"https://your-github-username.github.io/proiectarea-algoritmilor/data_structures/"}]}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzz00/O8D540Bq0WlB5U9U/p+1eH+T/t98BfH0G7/u8qIqL/9103C/7C2" crossorigin="anonymous"><link rel="stylesheet" href="/proiectarea-algoritmilor/assets/css/styles.98f49257.css">
+<script src="/proiectarea-algoritmilor/assets/js/runtime~main.a88bdc02.js" defer="defer"></script>
+<script src="/proiectarea-algoritmilor/assets/js/main.a5ad8240.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/proiectarea-algoritmilor/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/proiectarea-algoritmilor/"><div class="navbar__logo"><img src="/proiectarea-algoritmilor/img/logo.svg" alt="Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/proiectarea-algoritmilor/img/logo.svg" alt="Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Algorithmic Handbook</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/proiectarea-algoritmilor/data_structures/">Roadmaps</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/your-github-username/proiectarea-algoritmilor" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible menu__list-item-collapsible--active"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" aria-current="page" href="/proiectarea-algoritmilor/data_structures/"><span class="categoryLinkLabel_W154">Data Structures</span></a><button aria-label="Collapse sidebar category &#x27;Data Structures&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/proiectarea-algoritmilor/data_structures/theory_roadmap"><span class="linkLabel_WmDU">📖 Theory Roadmap: Data Structures</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/common_techniques/"><span class="categoryLinkLabel_W154">Common Techniques</span></a><button aria-label="Expand sidebar category &#x27;Common Techniques&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/divide_and_conquer/"><span class="categoryLinkLabel_W154">Divide and Conquer</span></a><button aria-label="Expand sidebar category &#x27;Divide and Conquer&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/greedy_algorithms/"><span class="categoryLinkLabel_W154">Greedy</span></a><button aria-label="Expand sidebar category &#x27;Greedy&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/dynamic_programming/"><span class="categoryLinkLabel_W154">Dynamic Programming</span></a><button aria-label="Expand sidebar category &#x27;Dynamic Programming&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/backtracking/"><span class="categoryLinkLabel_W154">Backtracking</span></a><button aria-label="Expand sidebar category &#x27;Backtracking&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/graph_algorithms/"><span class="categoryLinkLabel_W154">Graphs</span></a><button aria-label="Expand sidebar category &#x27;Graphs&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/randomized_algorithms/"><span class="categoryLinkLabel_W154">Randomized Algorithms</span></a><button aria-label="Expand sidebar category &#x27;Randomized Algorithms&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/game_algorithms/"><span class="categoryLinkLabel_W154">Game Algorithms</span></a><button aria-label="Expand sidebar category &#x27;Game Algorithms&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/proiectarea-algoritmilor/heuristic_algorithms/"><span class="categoryLinkLabel_W154">Heuristic Algorithms</span></a><button aria-label="Expand sidebar category &#x27;Heuristic Algorithms&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/proiectarea-algoritmilor/"><span class="linkLabel_WmDU">Professional Algorithmic Handbook</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/proiectarea-algoritmilor/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Data Structures</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>🏛️ Data Structure Roadmap</h1></header>
+<p><a class="" href="/proiectarea-algoritmilor/data_structures/theory_roadmap">📖 Read the Theory Roadmap</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-1-sets-and-arrays">SECTION 1: Sets and Arrays<a href="#section-1-sets-and-arrays" class="hash-link" aria-label="Direct link to SECTION 1: Sets and Arrays" title="Direct link to SECTION 1: Sets and Arrays" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-1-hashset-core-operations">PATTERN 1: HashSet Core Operations<a href="#pattern-1-hashset-core-operations" class="hash-link" aria-label="Direct link to PATTERN 1: HashSet Core Operations" title="Direct link to PATTERN 1: HashSet Core Operations" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard">🔥 Standard<a href="#-standard" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/contains-duplicate/" target="_blank" rel="noopener noreferrer" class="">Contains Duplicate — LeetCode 217</a></li>
+<li class=""><a href="https://leetcode.com/problems/intersection-of-two-arrays/" target="_blank" rel="noopener noreferrer" class="">Intersection of Two Arrays — LeetCode 349</a></li>
+<li class=""><a href="https://leetcode.com/problems/design-hashset/" target="_blank" rel="noopener noreferrer" class="">Design HashSet — LeetCode 705</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice">🧩 Practice<a href="#-practice" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/find-all-duplicates-in-an-array/" target="_blank" rel="noopener noreferrer" class="">Find All Duplicates in an Array — LeetCode 442</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-2-cyclic-sort-index-based-placement">PATTERN 2: Cyclic Sort Index-Based Placement<a href="#pattern-2-cyclic-sort-index-based-placement" class="hash-link" aria-label="Direct link to PATTERN 2: Cyclic Sort Index-Based Placement" title="Direct link to PATTERN 2: Cyclic Sort Index-Based Placement" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-1">🔥 Standard<a href="#-standard-1" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/missing-number/" target="_blank" rel="noopener noreferrer" class="">Missing Number — LeetCode 268</a></li>
+<li class=""><a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/" target="_blank" rel="noopener noreferrer" class="">Find All Numbers Disappeared in an Array — LeetCode 448</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-1">🧩 Practice<a href="#-practice-1" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/set-mismatch/" target="_blank" rel="noopener noreferrer" class="">Set Mismatch — LeetCode 645</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche">🌀 Niche<a href="#-niche" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/first-missing-positive/" target="_blank" rel="noopener noreferrer" class="">First Missing Positive — LeetCode 41</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-3-matrix-manipulation--traversal">PATTERN 3: Matrix Manipulation &amp; Traversal<a href="#pattern-3-matrix-manipulation--traversal" class="hash-link" aria-label="Direct link to PATTERN 3: Matrix Manipulation &amp; Traversal" title="Direct link to PATTERN 3: Matrix Manipulation &amp; Traversal" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-2">🔥 Standard<a href="#-standard-2" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/rotate-image/" target="_blank" rel="noopener noreferrer" class="">Rotate Image — LeetCode 48</a></li>
+<li class=""><a href="https://leetcode.com/problems/set-matrix-zeroes/" target="_blank" rel="noopener noreferrer" class="">Set Matrix Zeroes — LeetCode 73</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-2">🧩 Practice<a href="#-practice-2" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/spiral-matrix/" target="_blank" rel="noopener noreferrer" class="">Spiral Matrix — LeetCode 54</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-1">🌀 Niche<a href="#-niche-1" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/game-of-life/" target="_blank" rel="noopener noreferrer" class="">Game of Life — LeetCode 289</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-4-array-intervals-sorting">PATTERN 4: Array Intervals Sorting<a href="#pattern-4-array-intervals-sorting" class="hash-link" aria-label="Direct link to PATTERN 4: Array Intervals Sorting" title="Direct link to PATTERN 4: Array Intervals Sorting" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-3">🔥 Standard<a href="#-standard-3" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/merge-intervals/" target="_blank" rel="noopener noreferrer" class="">Merge Intervals — LeetCode 56</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-3">🧩 Practice<a href="#-practice-3" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/insert-interval/" target="_blank" rel="noopener noreferrer" class="">Insert Interval — LeetCode 57</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-5-in-place-reversal--swapping">PATTERN 5: In-Place Reversal &amp; Swapping<a href="#pattern-5-in-place-reversal--swapping" class="hash-link" aria-label="Direct link to PATTERN 5: In-Place Reversal &amp; Swapping" title="Direct link to PATTERN 5: In-Place Reversal &amp; Swapping" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-4">🔥 Standard<a href="#-standard-4" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/rotate-array/" target="_blank" rel="noopener noreferrer" class="">Rotate Array — LeetCode 189</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-2-linked-list">SECTION 2: Linked List<a href="#section-2-linked-list" class="hash-link" aria-label="Direct link to SECTION 2: Linked List" title="Direct link to SECTION 2: Linked List" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-1-in-place-reversal">PATTERN 1: In-Place Reversal<a href="#pattern-1-in-place-reversal" class="hash-link" aria-label="Direct link to PATTERN 1: In-Place Reversal" title="Direct link to PATTERN 1: In-Place Reversal" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-5">🔥 Standard<a href="#-standard-5" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank" rel="noopener noreferrer" class="">Reverse Linked List — LeetCode 206</a></li>
+<li class=""><a href="https://leetcode.com/problems/reverse-linked-list-ii/" target="_blank" rel="noopener noreferrer" class="">Reverse Linked List II — LeetCode 92</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-4">🧩 Practice<a href="#-practice-4" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/palindrome-linked-list/" target="_blank" rel="noopener noreferrer" class="">Palindrome Linked List — LeetCode 234</a></li>
+<li class=""><a href="https://leetcode.com/problems/swap-nodes-in-pairs/" target="_blank" rel="noopener noreferrer" class="">Swap Nodes in Pairs — LeetCode 24</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-2">🌀 Niche<a href="#-niche-2" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/reverse-nodes-in-k-group/" target="_blank" rel="noopener noreferrer" class="">Reverse Nodes in k-Group — LeetCode 25</a></li>
+<li class=""><a href="https://leetcode.com/problems/print-immutable-linked-list-in-reverse/" target="_blank" rel="noopener noreferrer" class="">Print Immutable Linked List in Reverse — LeetCode 1265</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-2-fast--slow-pointers-cycle--middle">PATTERN 2: Fast &amp; Slow Pointers Cycle &amp; Middle<a href="#pattern-2-fast--slow-pointers-cycle--middle" class="hash-link" aria-label="Direct link to PATTERN 2: Fast &amp; Slow Pointers Cycle &amp; Middle" title="Direct link to PATTERN 2: Fast &amp; Slow Pointers Cycle &amp; Middle" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-6">🔥 Standard<a href="#-standard-6" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/middle-of-the-linked-list/" target="_blank" rel="noopener noreferrer" class="">Middle of the Linked List — LeetCode 876</a></li>
+<li class=""><a href="https://leetcode.com/problems/linked-list-cycle/" target="_blank" rel="noopener noreferrer" class="">Linked List Cycle — LeetCode 141</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-5">🧩 Practice<a href="#-practice-5" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/linked-list-cycle-ii/" target="_blank" rel="noopener noreferrer" class="">Linked List Cycle II — LeetCode 142</a></li>
+<li class=""><a href="https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/" target="_blank" rel="noopener noreferrer" class="">Delete the Middle Node of a Linked List — LeetCode 2095</a></li>
+<li class=""><a href="https://leetcode.com/problems/reorder-list/" target="_blank" rel="noopener noreferrer" class="">Reorder List — LeetCode 143</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-3">🌀 Niche<a href="#-niche-3" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/" target="_blank" rel="noopener noreferrer" class="">Maximum Twin Sum of a Linked List — LeetCode 2130</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-3-dummy-nodes--node-deletion">PATTERN 3: Dummy Nodes &amp; Node Deletion<a href="#pattern-3-dummy-nodes--node-deletion" class="hash-link" aria-label="Direct link to PATTERN 3: Dummy Nodes &amp; Node Deletion" title="Direct link to PATTERN 3: Dummy Nodes &amp; Node Deletion" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-7">🔥 Standard<a href="#-standard-7" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/remove-linked-list-elements/" target="_blank" rel="noopener noreferrer" class="">Remove Linked List Elements — LeetCode 203</a></li>
+<li class=""><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list/" target="_blank" rel="noopener noreferrer" class="">Remove Duplicates from Sorted List — LeetCode 83</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-6">🧩 Practice<a href="#-practice-6" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/" target="_blank" rel="noopener noreferrer" class="">Remove Nth Node From End of List — LeetCode 19</a></li>
+<li class=""><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/" target="_blank" rel="noopener noreferrer" class="">Remove Duplicates from Sorted List II — LeetCode 82</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-4">🌀 Niche<a href="#-niche-4" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/delete-node-in-a-linked-list/" target="_blank" rel="noopener noreferrer" class="">Delete Node in a Linked List — LeetCode 237</a></li>
+<li class=""><a href="https://leetcode.com/problems/remove-duplicates-from-an-unsorted-linked-list/" target="_blank" rel="noopener noreferrer" class="">Remove Duplicates From an Unsorted Linked List — LeetCode 1836</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-4-reordering--advanced-manipulation">PATTERN 4: Reordering &amp; Advanced Manipulation<a href="#pattern-4-reordering--advanced-manipulation" class="hash-link" aria-label="Direct link to PATTERN 4: Reordering &amp; Advanced Manipulation" title="Direct link to PATTERN 4: Reordering &amp; Advanced Manipulation" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-8">🔥 Standard<a href="#-standard-8" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/rotate-list/" target="_blank" rel="noopener noreferrer" class="">Rotate List — LeetCode 61</a></li>
+<li class=""><a href="https://leetcode.com/problems/odd-even-linked-list/" target="_blank" rel="noopener noreferrer" class="">Odd Even Linked List — LeetCode 328</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-7">🧩 Practice<a href="#-practice-7" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/partition-list/" target="_blank" rel="noopener noreferrer" class="">Partition List — LeetCode 86</a></li>
+<li class=""><a href="https://leetcode.com/problems/sort-list/" target="_blank" rel="noopener noreferrer" class="">Sort List — LeetCode 148</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-5">🌀 Niche<a href="#-niche-5" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/swapping-nodes-in-a-linked-list/" target="_blank" rel="noopener noreferrer" class="">Swapping Nodes in a Linked List — LeetCode 1721</a></li>
+<li class=""><a href="https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/" target="_blank" rel="noopener noreferrer" class="">Flatten a Multilevel Doubly Linked List — LeetCode 430</a></li>
+<li class=""><a href="https://leetcode.com/problems/copy-list-with-random-pointer/" target="_blank" rel="noopener noreferrer" class="">Copy List with Random Pointer — LeetCode 138</a></li>
+<li class=""><a href="https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/" target="_blank" rel="noopener noreferrer" class="">Convert Binary Search Tree to Sorted Doubly Linked List — LeetCode 426</a></li>
+<li class=""><a href="https://leetcode.com/problems/insert-into-a-sorted-circular-linked-list/" target="_blank" rel="noopener noreferrer" class="">Insert into a Sorted Circular Linked List — LeetCode 708</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-5-merging--multiple-lists">PATTERN 5: Merging &amp; Multiple Lists<a href="#pattern-5-merging--multiple-lists" class="hash-link" aria-label="Direct link to PATTERN 5: Merging &amp; Multiple Lists" title="Direct link to PATTERN 5: Merging &amp; Multiple Lists" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-9">🔥 Standard<a href="#-standard-9" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/merge-two-sorted-lists/" target="_blank" rel="noopener noreferrer" class="">Merge Two Sorted Lists — LeetCode 21</a></li>
+<li class=""><a href="https://leetcode.com/problems/intersection-of-two-linked-lists/" target="_blank" rel="noopener noreferrer" class="">Intersection of Two Linked Lists — LeetCode 160</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-8">🧩 Practice<a href="#-practice-8" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/add-two-numbers/" target="_blank" rel="noopener noreferrer" class="">Add Two Numbers — LeetCode 2</a></li>
+<li class=""><a href="https://leetcode.com/problems/add-two-numbers-ii/" target="_blank" rel="noopener noreferrer" class="">Add Two Numbers II — LeetCode 445</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-6">🌀 Niche<a href="#-niche-6" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank" rel="noopener noreferrer" class="">Merge k Sorted Lists — LeetCode 23</a></li>
+<li class=""><a href="https://leetcode.com/problems/add-two-polynomials-represented-as-linked-lists/" target="_blank" rel="noopener noreferrer" class="">Add Two Polynomials Represented as Linked Lists — LeetCode 1634</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-7">🌀 Niche<a href="#-niche-7" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/plus-one-linked-list/" target="_blank" rel="noopener noreferrer" class="">Plus One Linked List — LeetCode 369</a></li>
+<li class=""><a href="https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/" target="_blank" rel="noopener noreferrer" class="">Convert Binary Number in a Linked List to Integer — LeetCode 1290</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-3-stacks--queues">SECTION 3: Stacks &amp; Queues<a href="#section-3-stacks--queues" class="hash-link" aria-label="Direct link to SECTION 3: Stacks &amp; Queues" title="Direct link to SECTION 3: Stacks &amp; Queues" translate="no">​</a></h2>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-10">🔥 Standard<a href="#-standard-10" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/valid-parentheses/" target="_blank" rel="noopener noreferrer" class="">Valid Parentheses — LeetCode 20</a></li>
+<li class=""><a href="https://leetcode.com/problems/decode-string/" target="_blank" rel="noopener noreferrer" class="">Decode String — LeetCode 394</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-9">🧩 Practice<a href="#-practice-9" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/longest-valid-parentheses/" target="_blank" rel="noopener noreferrer" class="">Longest Valid Parentheses — LeetCode 32</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-8">🌀 Niche<a href="#-niche-8" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/max-stack/" target="_blank" rel="noopener noreferrer" class="">Max Stack — LeetCode 716</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-2-monotonic-stack-next-greater--smaller">PATTERN 2: Monotonic Stack Next Greater / Smaller<a href="#pattern-2-monotonic-stack-next-greater--smaller" class="hash-link" aria-label="Direct link to PATTERN 2: Monotonic Stack Next Greater / Smaller" title="Direct link to PATTERN 2: Monotonic Stack Next Greater / Smaller" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-11">🔥 Standard<a href="#-standard-11" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/daily-temperatures/" target="_blank" rel="noopener noreferrer" class="">Daily Temperatures — LeetCode 739</a></li>
+<li class=""><a href="https://leetcode.com/problems/next-greater-element-i/" target="_blank" rel="noopener noreferrer" class="">Next Greater Element I — LeetCode 496</a></li>
+<li class=""><a href="https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/" target="_blank" rel="noopener noreferrer" class="">Final Prices With a Special Discount in a Shop — LeetCode 1475</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-10">🧩 Practice<a href="#-practice-10" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/next-greater-element-ii/" target="_blank" rel="noopener noreferrer" class="">Next Greater Element II — LeetCode 503</a></li>
+<li class=""><a href="https://leetcode.com/problems/online-stock-span/" target="_blank" rel="noopener noreferrer" class="">Online Stock Span — LeetCode 901</a></li>
+<li class=""><a href="https://leetcode.com/problems/132-pattern/" target="_blank" rel="noopener noreferrer" class="">132 Pattern — LeetCode 456</a></li>
+<li class=""><a href="https://leetcode.com/problems/next-greater-node-in-linked-list/" target="_blank" rel="noopener noreferrer" class="">Next Greater Node In Linked List — LeetCode 1019</a></li>
+<li class=""><a href="https://leetcode.com/problems/buildings-with-an-ocean-view/" target="_blank" rel="noopener noreferrer" class="">Buildings with an Ocean View — LeetCode 1762</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-9">🌀 Niche<a href="#-niche-9" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/remove-duplicate-letters/" target="_blank" rel="noopener noreferrer" class="">Remove Duplicate Letters — LeetCode 316</a></li>
+<li class=""><a href="https://leetcode.com/problems/smallest-subsequence-of-distinct-characters/" target="_blank" rel="noopener noreferrer" class="">Smallest Subsequence of Distinct Characters — LeetCode 1081</a></li>
+<li class=""><a href="https://leetcode.com/problems/find-the-most-competitive-subsequence/" target="_blank" rel="noopener noreferrer" class="">Find the Most Competitive Subsequence — LeetCode 1673</a></li>
+<li class=""><a href="https://leetcode.com/problems/remove-nodes-from-linked-list/" target="_blank" rel="noopener noreferrer" class="">Remove (Next Greater) Nodes From Linked List — LeetCode 2487</a></li>
+<li class=""><a href="https://leetcode.com/problems/steps-to-make-array-non-decreasing/" target="_blank" rel="noopener noreferrer" class="">Steps to Make Array Non-decreasing — LeetCode 2289</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-3-monotonic-stack-subarray-optimization--histograms">PATTERN 3: Monotonic Stack Subarray Optimization &amp; Histograms<a href="#pattern-3-monotonic-stack-subarray-optimization--histograms" class="hash-link" aria-label="Direct link to PATTERN 3: Monotonic Stack Subarray Optimization &amp; Histograms" title="Direct link to PATTERN 3: Monotonic Stack Subarray Optimization &amp; Histograms" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-12">🔥 Standard<a href="#-standard-12" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/largest-rectangle-in-histogram/" target="_blank" rel="noopener noreferrer" class="">Largest Rectangle in Histogram — LeetCode 84</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-11">🧩 Practice<a href="#-practice-11" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/sum-of-subarray-minimums/" target="_blank" rel="noopener noreferrer" class="">Sum of Subarray Minimums — LeetCode 907</a></li>
+<li class=""><a href="https://leetcode.com/problems/maximal-rectangle/" target="_blank" rel="noopener noreferrer" class="">Maximal Rectangle — LeetCode 85</a></li>
+<li class=""><a href="https://leetcode.com/problems/maximum-width-ramp/" target="_blank" rel="noopener noreferrer" class="">Maximum Width Ramp — LeetCode 962</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-10">🌀 Niche<a href="#-niche-10" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/sum-of-subarray-ranges/" target="_blank" rel="noopener noreferrer" class="">Sum of Subarray Ranges — LeetCode 2104</a></li>
+<li class=""><a href="https://leetcode.com/problems/number-of-valid-subarrays/" target="_blank" rel="noopener noreferrer" class="">Number of Valid Subarrays — LeetCode 1063</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-4-monotonic-queue--deque">PATTERN 4: Monotonic Queue &amp; Deque<a href="#pattern-4-monotonic-queue--deque" class="hash-link" aria-label="Direct link to PATTERN 4: Monotonic Queue &amp; Deque" title="Direct link to PATTERN 4: Monotonic Queue &amp; Deque" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-13">🔥 Standard<a href="#-standard-13" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/sliding-window-maximum/" target="_blank" rel="noopener noreferrer" class="">Sliding Window Maximum — LeetCode 239</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-12">🧩 Practice<a href="#-practice-12" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/" target="_blank" rel="noopener noreferrer" class="">Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit — LeetCode 1438</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-11">🌀 Niche<a href="#-niche-11" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/maximum-number-of-robots-within-budget/" target="_blank" rel="noopener noreferrer" class="">Maximum Number of Robots Within Budget — LeetCode 2398</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-5-object-design-stacks--queues">PATTERN 5: Object Design Stacks &amp; Queues<a href="#pattern-5-object-design-stacks--queues" class="hash-link" aria-label="Direct link to PATTERN 5: Object Design Stacks &amp; Queues" title="Direct link to PATTERN 5: Object Design Stacks &amp; Queues" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-14">🔥 Standard<a href="#-standard-14" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/design-circular-queue/" target="_blank" rel="noopener noreferrer" class="">Design Circular Queue — LeetCode 622</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-13">🧩 Practice<a href="#-practice-13" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/design-circular-deque/" target="_blank" rel="noopener noreferrer" class="">Design Circular Deque — LeetCode 641</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-4-heaps---priority-queues">SECTION 4: Heaps - Priority Queues<a href="#section-4-heaps---priority-queues" class="hash-link" aria-label="Direct link to SECTION 4: Heaps - Priority Queues" title="Direct link to SECTION 4: Heaps - Priority Queues" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-1-top-k-pattern">PATTERN 1: Top K Pattern<a href="#pattern-1-top-k-pattern" class="hash-link" aria-label="Direct link to PATTERN 1: Top K Pattern" title="Direct link to PATTERN 1: Top K Pattern" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-15">🔥 Standard<a href="#-standard-15" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/kth-largest-element-in-an-array/" target="_blank" rel="noopener noreferrer" class="">Kth Largest Element in an Array — LeetCode 215</a></li>
+<li class=""><a href="https://leetcode.com/problems/top-k-frequent-elements/" target="_blank" rel="noopener noreferrer" class="">Top K Frequent Elements — LeetCode 347</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-14">🧩 Practice<a href="#-practice-14" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/k-closest-points-to-origin/" target="_blank" rel="noopener noreferrer" class="">K Closest Points to Origin — LeetCode 973</a></li>
+<li class=""><a href="https://leetcode.com/problems/find-k-closest-elements/" target="_blank" rel="noopener noreferrer" class="">Find K Closest Elements — LeetCode 658</a></li>
+<li class=""><a href="https://leetcode.com/problems/sort-characters-by-frequency/" target="_blank" rel="noopener noreferrer" class="">Sort Characters By Frequency (Frequency Sort) — LeetCode 451</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-12">🌀 Niche<a href="#-niche-12" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/top-k-frequent-words/" target="_blank" rel="noopener noreferrer" class="">Top K Frequent Words — LeetCode 692</a></li>
+<li class=""><a href="https://leetcode.com/problems/kth-largest-number-in-a-stream/" target="_blank" rel="noopener noreferrer" class="">Kth Largest Number in a Stream — LeetCode 703</a></li>
+<li class=""><a href="https://leetcode.com/problems/ugly-number-ii/" target="_blank" rel="noopener noreferrer" class="">Ugly Number II — LeetCode 264</a></li>
+<li class=""><a href="https://leetcode.com/problems/rearrange-string-k-distance-apart/" target="_blank" rel="noopener noreferrer" class="">Rearrange String K Distance Apart — LeetCode 358</a></li>
+<li class=""><a href="https://leetcode.com/problems/kth-smallest-sum-of-a-matrix-with-sorted-rows/" target="_blank" rel="noopener noreferrer" class="">Kth Smallest Sum of a Matrix With Sorted Rows — LeetCode 1439</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-2-merge-k-sorted-pattern">PATTERN 2: Merge K Sorted Pattern<a href="#pattern-2-merge-k-sorted-pattern" class="hash-link" aria-label="Direct link to PATTERN 2: Merge K Sorted Pattern" title="Direct link to PATTERN 2: Merge K Sorted Pattern" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-16">🔥 Standard<a href="#-standard-16" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank" rel="noopener noreferrer" class="">Merge K Sorted Lists — LeetCode 23</a></li>
+<li class=""><a href="https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/" target="_blank" rel="noopener noreferrer" class="">Kth Smallest Element in a Sorted Matrix — LeetCode 378</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-15">🧩 Practice<a href="#-practice-15" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/find-k-pairs-with-smallest-sums/" target="_blank" rel="noopener noreferrer" class="">Find K Pairs with Smallest Sums — LeetCode 373</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-3-two-heaps-pattern">PATTERN 3: Two Heaps Pattern<a href="#pattern-3-two-heaps-pattern" class="hash-link" aria-label="Direct link to PATTERN 3: Two Heaps Pattern" title="Direct link to PATTERN 3: Two Heaps Pattern" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-17">🔥 Standard<a href="#-standard-17" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/find-median-from-data-stream/" target="_blank" rel="noopener noreferrer" class="">Find Median from Data Stream — LeetCode 295</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-16">🧩 Practice<a href="#-practice-16" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/sliding-window-median/" target="_blank" rel="noopener noreferrer" class="">Sliding Window Median — LeetCode 480</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-4-minimum-number--heap-simulation">PATTERN 4: Minimum Number &amp; Heap Simulation<a href="#pattern-4-minimum-number--heap-simulation" class="hash-link" aria-label="Direct link to PATTERN 4: Minimum Number &amp; Heap Simulation" title="Direct link to PATTERN 4: Minimum Number &amp; Heap Simulation" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-18">🔥 Standard<a href="#-standard-18" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/last-stone-weight/" target="_blank" rel="noopener noreferrer" class="">Last Stone Weight — LeetCode 1046</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-17">🧩 Practice<a href="#-practice-17" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/" target="_blank" rel="noopener noreferrer" class="">The K Weakest Rows in a Matrix — LeetCode 1337</a></li>
+<li class=""><a href="https://leetcode.com/problems/furthest-building-you-can-reach/" target="_blank" rel="noopener noreferrer" class="">Furthest Building You Can Reach — LeetCode 1642</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-13">🌀 Niche<a href="#-niche-13" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/employee-free-time/" target="_blank" rel="noopener noreferrer" class="">Employee Free Time — LeetCode 759</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-cost-to-hire-k-workers/" target="_blank" rel="noopener noreferrer" class="">Minimum Cost to Hire K Workers — LeetCode 857</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-5-trees">SECTION 5: Trees<a href="#section-5-trees" class="hash-link" aria-label="Direct link to SECTION 5: Trees" title="Direct link to SECTION 5: Trees" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-1-tree-dfs-preorder--inorder--postorder">PATTERN 1: Tree DFS Preorder / Inorder / Postorder<a href="#pattern-1-tree-dfs-preorder--inorder--postorder" class="hash-link" aria-label="Direct link to PATTERN 1: Tree DFS Preorder / Inorder / Postorder" title="Direct link to PATTERN 1: Tree DFS Preorder / Inorder / Postorder" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-19">🔥 Standard<a href="#-standard-19" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/binary-tree-inorder-traversal/" target="_blank" rel="noopener noreferrer" class="">Binary Tree Inorder Traversal (Easy) — LeetCode 94</a></li>
+<li class=""><a href="https://leetcode.com/problems/binary-tree-preorder-traversal/" target="_blank" rel="noopener noreferrer" class="">Binary Tree Preorder Traversal (Easy) — LeetCode 144</a></li>
+<li class=""><a href="https://leetcode.com/problems/binary-tree-postorder-traversal/" target="_blank" rel="noopener noreferrer" class="">Binary Tree Postorder Traversal (Easy) — LeetCode 145</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-18">🧩 Practice<a href="#-practice-18" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/diagonal-traverse/" target="_blank" rel="noopener noreferrer" class="">Diagonal Traverse — LeetCode 498</a></li>
+<li class=""><a href="https://leetcode.com/problems/binary-tree-vertical-order-traversal/" target="_blank" rel="noopener noreferrer" class="">Binary Tree Vertical Order Traversal — LeetCode 314</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-2-level-order-traversal-bfs">PATTERN 2: Level Order Traversal BFS<a href="#pattern-2-level-order-traversal-bfs" class="hash-link" aria-label="Direct link to PATTERN 2: Level Order Traversal BFS" title="Direct link to PATTERN 2: Level Order Traversal BFS" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-20">🔥 Standard<a href="#-standard-20" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank" rel="noopener noreferrer" class="">Binary Tree Level Order Traversal — LeetCode 102</a></li>
+<li class=""><a href="https://leetcode.com/problems/binary-tree-bottom-up-level-order-traversal/" target="_blank" rel="noopener noreferrer" class="">Binary Tree Bottom up Level Order Traversal — LeetCode 107</a></li>
+<li class=""><a href="https://leetcode.com/problems/binary-tree-right-side-view/" target="_blank" rel="noopener noreferrer" class="">Binary Tree Right Side View — LeetCode 199</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-19">🧩 Practice<a href="#-practice-19" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/" target="_blank" rel="noopener noreferrer" class="">Binary Tree Zigzag Level Order Traversal — LeetCode 103</a></li>
+<li class=""><a href="https://leetcode.com/problems/average-of-levels-in-binary-tree/" target="_blank" rel="noopener noreferrer" class="">Average of Levels in Binary Tree — LeetCode 637</a></li>
+<li class=""><a href="https://leetcode.com/problems/n-ary-tree-level-order-traversal/" target="_blank" rel="noopener noreferrer" class="">N-ary Tree Level Order Traversal — LeetCode 429</a></li>
+<li class=""><a href="https://leetcode.com/problems/cousins-in-binary-tree/" target="_blank" rel="noopener noreferrer" class="">Cousins in Binary Tree — LeetCode 993</a></li>
+<li class=""><a href="https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/" target="_blank" rel="noopener noreferrer" class="">Populating Next Right Pointers in Each Node II — LeetCode 117</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-14">🌀 Niche<a href="#-niche-14" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/add-one-row-at-a-given-level-in-a-binary-tree/" target="_blank" rel="noopener noreferrer" class="">Add One Row at a given Level in a binary Tree — LeetCode 623</a></li>
+<li class=""><a href="https://leetcode.com/problems/reverse-odd-levels-of-binary-tree/" target="_blank" rel="noopener noreferrer" class="">Reverse Odd Levels of Binary Tree — LeetCode 2415</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-number-of-operations-to-sort-a-binary-tree-by-level/" target="_blank" rel="noopener noreferrer" class="">Minimum Number of Operations to Sort a Binary Tree by Level — LeetCode 2471</a></li>
+<li class=""><a href="https://leetcode.com/problems/maximum-width-of-binary-tree/" target="_blank" rel="noopener noreferrer" class="">Maximum width of Binary Tree — LeetCode 662</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-3-tree-construction--restructuring">PATTERN 3: Tree Construction &amp; Restructuring<a href="#pattern-3-tree-construction--restructuring" class="hash-link" aria-label="Direct link to PATTERN 3: Tree Construction &amp; Restructuring" title="Direct link to PATTERN 3: Tree Construction &amp; Restructuring" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-21">🔥 Standard<a href="#-standard-21" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal" target="_blank" rel="noopener noreferrer" class="">Construct Binary Tree from Preorder and Inorder Traversal — LeetCode 105</a></li>
+<li class=""><a href="https://leetcode.com/problems/flatten-binary-tree-to-linked-list/" target="_blank" rel="noopener noreferrer" class="">Flatten Binary Tree to Linked List — LeetCode 114</a></li>
+<li class=""><a href="https://leetcode.com/problems/invert-binary-tree/" target="_blank" rel="noopener noreferrer" class="">Invert Binary Tree — LeetCode 226</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-20">🧩 Practice<a href="#-practice-20" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal" target="_blank" rel="noopener noreferrer" class="">Construct Binary Tree from Inorder and Postorder Traversal — LeetCode 106</a></li>
+<li class=""><a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/" target="_blank" rel="noopener noreferrer" class="">Construct Binary Tree from Preorder and Postorder Traversal — LeetCode 889</a></li>
+<li class=""><a href="https://leetcode.com/problems/maximum-binary-tree/" target="_blank" rel="noopener noreferrer" class="">Maximum Binary Tree — LeetCode 654</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-15">🌀 Niche<a href="#-niche-15" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/construct-string-from-binary-tree" target="_blank" rel="noopener noreferrer" class="">Construct String from Binary Tree — LeetCode 606</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-4-tree-properties--comparison-object-level">PATTERN 4: Tree Properties &amp; Comparison Object Level<a href="#pattern-4-tree-properties--comparison-object-level" class="hash-link" aria-label="Direct link to PATTERN 4: Tree Properties &amp; Comparison Object Level" title="Direct link to PATTERN 4: Tree Properties &amp; Comparison Object Level" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-22">🔥 Standard<a href="#-standard-22" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/same-tree/" target="_blank" rel="noopener noreferrer" class="">Same Tree — LeetCode 100</a></li>
+<li class=""><a href="https://leetcode.com/problems/symmetric-tree/" target="_blank" rel="noopener noreferrer" class="">Symmetric Tree — LeetCode 101</a></li>
+<li class=""><a href="https://leetcode.com/problems/merge-two-binary-trees/" target="_blank" rel="noopener noreferrer" class="">Merge Two Binary Trees — LeetCode 617</a></li>
+<li class=""><a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/" target="_blank" rel="noopener noreferrer" class="">Maximum Depth of Binary Tree — LeetCode 104</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-21">🧩 Practice<a href="#-practice-21" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/minimum-depth-of-binary-tree/" target="_blank" rel="noopener noreferrer" class="">Minimum Depth of Binary Tree — LeetCode 111</a></li>
+<li class=""><a href="https://leetcode.com/problems/maximum-depth-of-n-ary-tree/" target="_blank" rel="noopener noreferrer" class="">Maximum Depth of N-ary Tree — LeetCode 559</a></li>
+<li class=""><a href="https://leetcode.com/problems/balanced-binary-tree/" target="_blank" rel="noopener noreferrer" class="">Balanced Binary Tree — LeetCode 110</a></li>
+<li class=""><a href="https://leetcode.com/problems/leaf-similar-trees/" target="_blank" rel="noopener noreferrer" class="">Leaf-Similar Trees — LeetCode 872</a></li>
+<li class=""><a href="https://leetcode.com/problems/subtree-of-another-tree/" target="_blank" rel="noopener noreferrer" class="">Subtree of Another Tree — LeetCode 572</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-16">🌀 Niche<a href="#-niche-16" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/count-complete-tree-nodes/" target="_blank" rel="noopener noreferrer" class="">Count Complete Tree Nodes — LeetCode 222</a></li>
+<li class=""><a href="https://leetcode.com/problems/count-good-nodes-in-binary-tree/" target="_blank" rel="noopener noreferrer" class="">Count Good Nodes in Binary Tree — LeetCode 1448</a></li>
+<li class=""><a href="https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/" target="_blank" rel="noopener noreferrer" class="">Count Nodes Equal to Average of Subtree — LeetCode 2265</a></li>
+<li class=""><a href="https://leetcode.com/problems/count-univalue-subtrees/" target="_blank" rel="noopener noreferrer" class="">Count Univalue Subtrees — LeetCode 250</a></li>
+<li class=""><a href="https://leetcode.com/problems/sum-of-left-leaves/" target="_blank" rel="noopener noreferrer" class="">Sum of Left Leaves — LeetCode 404</a></li>
+<li class=""><a href="https://leetcode.com/problems/deepest-leaves-sum" target="_blank" rel="noopener noreferrer" class="">Deepest Leaves Sum — LeetCode 1302</a></li>
+<li class=""><a href="https://leetcode.com/problems/find-duplicate-subtrees/" target="_blank" rel="noopener noreferrer" class="">Find Duplicate Subtrees — LeetCode 652</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-5-root-to-leaf-paths--sums">PATTERN 5: Root to Leaf Paths &amp; Sums<a href="#pattern-5-root-to-leaf-paths--sums" class="hash-link" aria-label="Direct link to PATTERN 5: Root to Leaf Paths &amp; Sums" title="Direct link to PATTERN 5: Root to Leaf Paths &amp; Sums" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-23">🔥 Standard<a href="#-standard-23" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/path-sum/" target="_blank" rel="noopener noreferrer" class="">Path Sum — LeetCode 112</a></li>
+<li class=""><a href="https://leetcode.com/problems/path-sum-ii/" target="_blank" rel="noopener noreferrer" class="">Path Sum II — LeetCode 113</a></li>
+<li class=""><a href="https://leetcode.com/problems/binary-tree-paths/" target="_blank" rel="noopener noreferrer" class="">Binary Tree Paths — LeetCode 257</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-22">🧩 Practice<a href="#-practice-22" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/sum-root-to-leaf-numbers/" target="_blank" rel="noopener noreferrer" class="">Sum Root to Leaf Numbers — LeetCode 129</a></li>
+<li class=""><a href="https://leetcode.com/problems/smallest-string-starting-from-leaf/" target="_blank" rel="noopener noreferrer" class="">Smallest String Starting From Leaf — LeetCode 988</a></li>
+<li class=""><a href="https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/" target="_blank" rel="noopener noreferrer" class="">Sum of Root To Leaf Binary Numbers — LeetCode 1022</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-17">🌀 Niche<a href="#-niche-17" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/" target="_blank" rel="noopener noreferrer" class="">Pseudo-Palindromic Paths in a Binary Tree — LeetCode 1457</a></li>
+<li class=""><a href="https://leetcode.com/problems/insufficient-nodes-in-root-to-leaf-paths/" target="_blank" rel="noopener noreferrer" class="">Insufficient Nodes in Root to Leaf Paths — LeetCode 1080</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-6-ancestry--lowest-common-ancestor-lca">PATTERN 6: Ancestry &amp; Lowest Common Ancestor LCA<a href="#pattern-6-ancestry--lowest-common-ancestor-lca" class="hash-link" aria-label="Direct link to PATTERN 6: Ancestry &amp; Lowest Common Ancestor LCA" title="Direct link to PATTERN 6: Ancestry &amp; Lowest Common Ancestor LCA" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-24">🔥 Standard<a href="#-standard-24" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/" target="_blank" rel="noopener noreferrer" class="">Lowest Common Ancestor of a Binary Tree — LeetCode 236</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-23">🧩 Practice<a href="#-practice-23" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/" target="_blank" rel="noopener noreferrer" class="">Lowest Common Ancestor of Deepest Leaves — LeetCode 1123</a></li>
+<li class=""><a href="https://leetcode.com/problems/kth-ancestor-of-a-tree-node/" target="_blank" rel="noopener noreferrer" class="">Kth Ancestor of a Tree Node — LeetCode 1483</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-7-tree-dp-distances--complex-paths">PATTERN 7: Tree DP, Distances &amp; Complex Paths<a href="#pattern-7-tree-dp-distances--complex-paths" class="hash-link" aria-label="Direct link to PATTERN 7: Tree DP, Distances &amp; Complex Paths" title="Direct link to PATTERN 7: Tree DP, Distances &amp; Complex Paths" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-25">🔥 Standard<a href="#-standard-25" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/diameter-of-binary-tree/" target="_blank" rel="noopener noreferrer" class="">Diameter of Binary Tree — LeetCode 543</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-24">🧩 Practice<a href="#-practice-24" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/" target="_blank" rel="noopener noreferrer" class="">Binary Tree Maximum Path Sum — LeetCode 124</a></li>
+<li class=""><a href="https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/" target="_blank" rel="noopener noreferrer" class="">All Nodes Distance K in Binary Tree — LeetCode 863</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-18">🌀 Niche<a href="#-niche-18" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/longest-univalue-path/" target="_blank" rel="noopener noreferrer" class="">Longest Univalue Path — LeetCode 687</a></li>
+<li class=""><a href="https://leetcode.com/problems/binary-tree-cameras/" target="_blank" rel="noopener noreferrer" class="">Binary Tree Cameras — LeetCode 968</a></li>
+<li class=""><a href="https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/" target="_blank" rel="noopener noreferrer" class="">Maximum Difference Between Node and Ancestor — LeetCode 1026</a></li>
+<li class=""><a href="https://leetcode.com/problems/all-possible-full-binary-trees/" target="_blank" rel="noopener noreferrer" class="">All Possible Full Binary Trees — LeetCode 894</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-8-binary-search-tree-bst-operations">PATTERN 8: Binary Search Tree BST Operations<a href="#pattern-8-binary-search-tree-bst-operations" class="hash-link" aria-label="Direct link to PATTERN 8: Binary Search Tree BST Operations" title="Direct link to PATTERN 8: Binary Search Tree BST Operations" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-26">🔥 Standard<a href="#-standard-26" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/search-in-a-binary-search-tree" target="_blank" rel="noopener noreferrer" class="">Search in a Binary Search Tree — LeetCode 700</a></li>
+<li class=""><a href="https://leetcode.com/problems/validate-binary-search-tree" target="_blank" rel="noopener noreferrer" class="">Validate Binary Search Tree — LeetCode 98</a></li>
+<li class=""><a href="https://leetcode.com/problems/insert-into-a-binary-search-tree/" target="_blank" rel="noopener noreferrer" class="">Insert into a Binary Search Tree — LeetCode 701</a></li>
+<li class=""><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree" target="_blank" rel="noopener noreferrer" class="">Lowest Common Ancestor of a Binary Search Tree — LeetCode 235</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-25">🧩 Practice<a href="#-practice-25" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/delete-node-in-a-bst" target="_blank" rel="noopener noreferrer" class="">Delete Node in a BST — LeetCode 450</a></li>
+<li class=""><a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst" target="_blank" rel="noopener noreferrer" class="">Kth Smallest Element in a BST — LeetCode 230</a></li>
+<li class=""><a href="https://leetcode.com/problems/range-sum-of-bst/" target="_blank" rel="noopener noreferrer" class="">Range Sum of BST — LeetCode 938</a></li>
+<li class=""><a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/" target="_blank" rel="noopener noreferrer" class="">Convert Sorted Array to Binary Search Tree — LeetCode 108</a></li>
+<li class=""><a href="https://leetcode.com/problems/two-sum-iv-input-is-a-bst/" target="_blank" rel="noopener noreferrer" class="">Two Sum IV - Input is a BST — LeetCode 653</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-19">🌀 Niche<a href="#-niche-19" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree" target="_blank" rel="noopener noreferrer" class="">Convert Sorted List to Binary Search Tree — LeetCode 109</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-absolute-difference-in-bst/" target="_blank" rel="noopener noreferrer" class="">Minimum Absolute Difference in BST — LeetCode 530</a></li>
+<li class=""><a href="https://leetcode.com/problems/find-mode-in-binary-search-tree/" target="_blank" rel="noopener noreferrer" class="">Find Mode in Binary Search Tree — LeetCode 501</a></li>
+<li class=""><a href="https://leetcode.com/problems/increasing-order-search-tree/" target="_blank" rel="noopener noreferrer" class="">Increasing Order Search Tree — LeetCode 897</a></li>
+<li class=""><a href="https://leetcode.com/problems/all-elements-in-two-binary-search-trees/" target="_blank" rel="noopener noreferrer" class="">All Elements in Two Binary Search Trees — LeetCode 1305</a></li>
+<li class=""><a href="https://leetcode.com/problems/trim-a-binary-search-tree/" target="_blank" rel="noopener noreferrer" class="">Trim a Binary Search Tree — LeetCode 669</a></li>
+<li class=""><a href="https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/" target="_blank" rel="noopener noreferrer" class="">Construct Binary Search Tree from Preorder Traversal — LeetCode 1008</a></li>
+<li class=""><a href="https://leetcode.com/problems/unique-binary-search-trees/" target="_blank" rel="noopener noreferrer" class="">Unique Binary Search Trees (Catalan) — LeetCode 96</a></li>
+<li class=""><a href="https://leetcode.com/problems/recover-binary-search-tree/" target="_blank" rel="noopener noreferrer" class="">Recover Binary Search Tree — LeetCode 99</a></li>
+<li class=""><a href="https://leetcode.com/problems/bst-iterator/" target="_blank" rel="noopener noreferrer" class="">BST Iterator — LeetCode 173</a></li>
+<li class=""><a href="https://leetcode.com/problems/inorder-successor-in-bst/" target="_blank" rel="noopener noreferrer" class="">Inorder Successor in BST — LeetCode 285</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-9-trie-prefix-tree">PATTERN 9: Trie Prefix Tree<a href="#pattern-9-trie-prefix-tree" class="hash-link" aria-label="Direct link to PATTERN 9: Trie Prefix Tree" title="Direct link to PATTERN 9: Trie Prefix Tree" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-27">🔥 Standard<a href="#-standard-27" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/implement-trie/" target="_blank" rel="noopener noreferrer" class="">Implement Trie (Prefix Tree) — LeetCode 208</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-10-segment-tree-array-mapping-on-tree-logic">PATTERN 10: Segment Tree Array mapping on Tree logic<a href="#pattern-10-segment-tree-array-mapping-on-tree-logic" class="hash-link" aria-label="Direct link to PATTERN 10: Segment Tree Array mapping on Tree logic" title="Direct link to PATTERN 10: Segment Tree Array mapping on Tree logic" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-26">🧩 Practice<a href="#-practice-26" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/queue-reconstruction-by-height/" target="_blank" rel="noopener noreferrer" class="">Queue Reconstruction by Height — LeetCode 406</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-6-graphs">SECTION 6: Graphs<a href="#section-6-graphs" class="hash-link" aria-label="Direct link to SECTION 6: Graphs" title="Direct link to SECTION 6: Graphs" translate="no">​</a></h2>
+<p><em>Disclaimer: This section is just for Design/Object problems only. For complete graph algos, check Graph Roadmap.</em></p>
+<p><strong>Basics &amp; Graph Representations:</strong>
+Graph is a non-linear data structure like tree data structure. A Graph is composed of a set of vertices(V) and a set of edges(E). The vertices are connected with each other through edges.
+The limitation of tree is, it can only represent hierarchical data. For situations where nodes or vertices are randomly connected with each other other, we use Graph.
+Example situations where we use graph data structure are, a social network, a computer network, a network of locations used in GPS and many more examples where different nodes or vertices are connected without any hierarchic or constraint on structure.</p>
+<ul>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/breadth-first-search-or-bfs-for-a-graph/" target="_blank" rel="noopener noreferrer" class="">Breadth First Traversal</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/depth-first-search-or-dfs-for-a-graph/" target="_blank" rel="noopener noreferrer" class="">Depth First Traversal</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/dijkstras-shortest-path-algorithm-greedy-algo-7/" target="_blank" rel="noopener noreferrer" class="">Dijkstra’s shortest path</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/bellman-ford-algorithm-dp-23/" target="_blank" rel="noopener noreferrer" class="">Bellman–Ford</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/floyd-warshall-algorithm-dp-16/" target="_blank" rel="noopener noreferrer" class="">Floyd Warshall</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/prims-minimum-spanning-tree-mst-greedy-algo-5/" target="_blank" rel="noopener noreferrer" class="">Prim’s Minimum Spanning Tree (MST)</a></li>
+<li class=""><a href="https://www.geeksforgeeks.org/dsa/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/" target="_blank" rel="noopener noreferrer" class="">Kruskal’s Minimum Spanning Tree</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-1-graph-design--object-representation">PATTERN 1: Graph Design &amp; Object Representation<a href="#pattern-1-graph-design--object-representation" class="hash-link" aria-label="Direct link to PATTERN 1: Graph Design &amp; Object Representation" title="Direct link to PATTERN 1: Graph Design &amp; Object Representation" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-28">🔥 Standard<a href="#-standard-28" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/clone-graph" target="_blank" rel="noopener noreferrer" class="">Clone Graph — LeetCode 133</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-27">🧩 Practice<a href="#-practice-27" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/design-graph-with-shortest-path-calculator" target="_blank" rel="noopener noreferrer" class="">Design Graph with Shortest Path Calculator (Floyd–Warshall Algorithm / Dijkstra) — LeetCode 2642</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-7-hashtables">SECTION 7: HashTables<a href="#section-7-hashtables" class="hash-link" aria-label="Direct link to SECTION 7: HashTables" title="Direct link to SECTION 7: HashTables" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-1-frequency-counting--basic-mapping">PATTERN 1: Frequency Counting &amp; Basic Mapping<a href="#pattern-1-frequency-counting--basic-mapping" class="hash-link" aria-label="Direct link to PATTERN 1: Frequency Counting &amp; Basic Mapping" title="Direct link to PATTERN 1: Frequency Counting &amp; Basic Mapping" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-29">🔥 Standard<a href="#-standard-29" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/" target="_blank" rel="noopener noreferrer" class="">How Many Numbers Are Smaller Than the Current Number — LeetCode 1365</a></li>
+<li class=""><a href="https://leetcode.com/problems/valid-anagram/" target="_blank" rel="noopener noreferrer" class="">Valid Anagram — LeetCode 242</a></li>
+<li class=""><a href="https://leetcode.com/problems/first-unique-character-in-a-string/" target="_blank" rel="noopener noreferrer" class="">First Unique Character in a String — LeetCode 387</a></li>
+<li class="">Character Frequency / Word Counting (Foundation)</li>
+<li class="">Character Mapping Between Strings (Foundation)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-28">🧩 Practice<a href="#-practice-28" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/find-repeated-dna-sequences/" target="_blank" rel="noopener noreferrer" class="">Find Repeated DNA Sequences — LeetCode 187</a></li>
+<li class="">Maximum Number of Occurrences (Foundation)</li>
+<li class="">Second Most Frequent Element (Foundation)</li>
+<li class="">Word Occurrences in Sentence (Foundation)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-20">🌀 Niche<a href="#-niche-20" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/common-characters-in-strings/" target="_blank" rel="noopener noreferrer" class="">Common Characters in Strings — LeetCode 1002</a></li>
+<li class=""><a href="https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/" target="_blank" rel="noopener noreferrer" class="">Longest Palindrome by Concatenating Two Letter Words — LeetCode 2131</a></li>
+<li class=""><a href="https://leetcode.com/problems/number-of-atoms/" target="_blank" rel="noopener noreferrer" class="">Number of Atoms — LeetCode 726</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-2-grouping--advanced-mapping">PATTERN 2: Grouping &amp; Advanced Mapping<a href="#pattern-2-grouping--advanced-mapping" class="hash-link" aria-label="Direct link to PATTERN 2: Grouping &amp; Advanced Mapping" title="Direct link to PATTERN 2: Grouping &amp; Advanced Mapping" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-30">🔥 Standard<a href="#-standard-30" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/group-anagrams/" target="_blank" rel="noopener noreferrer" class="">Group Anagrams — LeetCode 49</a></li>
+<li class=""><a href="https://leetcode.com/problems/isomorphic-strings/" target="_blank" rel="noopener noreferrer" class="">Isomorphic Strings (Check if Two Strings are Isomorphic) — LeetCode 205</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-29">🧩 Practice<a href="#-practice-29" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/word-pattern/" target="_blank" rel="noopener noreferrer" class="">Word Pattern — LeetCode 290</a></li>
+<li class="">Group Words by Length (Foundation)</li>
+<li class="">Group Emails by Domain (Foundation)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-21">🌀 Niche<a href="#-niche-21" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/word-pattern-ii/" target="_blank" rel="noopener noreferrer" class="">Word Pattern II — LeetCode 291</a></li>
+<li class=""><a href="https://leetcode.com/problems/palindrome-pairs/" target="_blank" rel="noopener noreferrer" class="">Palindrome Pairs — LeetCode 336</a></li>
+<li class=""><a href="https://leetcode.com/problems/equal-row-and-column-pairs/" target="_blank" rel="noopener noreferrer" class="">Equal Row and Column Pairs — LeetCode 2352</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-3-pairs--tuple-sums-non-slidingnon-prefix">PATTERN 3: Pairs &amp; Tuple Sums Non-Sliding/Non-Prefix<a href="#pattern-3-pairs--tuple-sums-non-slidingnon-prefix" class="hash-link" aria-label="Direct link to PATTERN 3: Pairs &amp; Tuple Sums Non-Sliding/Non-Prefix" title="Direct link to PATTERN 3: Pairs &amp; Tuple Sums Non-Sliding/Non-Prefix" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-31">🔥 Standard<a href="#-standard-31" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/find-pairs-with-given-difference/" target="_blank" rel="noopener noreferrer" class="">Find Pairs with Given Difference — LeetCode 532</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-30">🧩 Practice<a href="#-practice-30" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/4sum-ii/" target="_blank" rel="noopener noreferrer" class="">4Sum II — LeetCode 454</a></li>
+<li class="">Frequency of Sums (Foundation)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-22">🌀 Niche<a href="#-niche-22" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/concatenated-words/" target="_blank" rel="noopener noreferrer" class="">Concatenated Words — LeetCode 472</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-4-design-data-structure-hash-maps--caches">PATTERN 4: Design Data Structure Hash Maps &amp; Caches<a href="#pattern-4-design-data-structure-hash-maps--caches" class="hash-link" aria-label="Direct link to PATTERN 4: Design Data Structure Hash Maps &amp; Caches" title="Direct link to PATTERN 4: Design Data Structure Hash Maps &amp; Caches" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-32">🔥 Standard<a href="#-standard-32" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/design-hashmap/" target="_blank" rel="noopener noreferrer" class="">Design HashMap — LeetCode 706</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-31">🧩 Practice<a href="#-practice-31" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/lru-cache/" target="_blank" rel="noopener noreferrer" class="">LRU Cache — LeetCode 146</a></li>
+<li class=""><a href="https://leetcode.com/problems/insert-delete-getrandom-o/" target="_blank" rel="noopener noreferrer" class="">Insert Delete GetRandom O(1) — LeetCode 380</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-23">🌀 Niche<a href="#-niche-23" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/lfu-cache/" target="_blank" rel="noopener noreferrer" class="">LFU Cache — LeetCode 460</a></li>
+<li class=""><a href="https://leetcode.com/problems/design-twitter/" target="_blank" rel="noopener noreferrer" class="">Design Twitter — LeetCode 355</a></li>
+<li class=""><a href="https://leetcode.com/problems/logger-rate-limiter/" target="_blank" rel="noopener noreferrer" class="">Logger Rate Limiter — LeetCode 359</a></li>
+<li class=""><a href="https://leetcode.com/problems/design-in-memory-file-system/" target="_blank" rel="noopener noreferrer" class="">Design In-Memory File System — LeetCode 588</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-8-sorting">SECTION 8: Sorting<a href="#section-8-sorting" class="hash-link" aria-label="Direct link to SECTION 8: Sorting" title="Direct link to SECTION 8: Sorting" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-1-overlapping-intervals-sorting-by-startend">PATTERN 1: Overlapping Intervals Sorting by Start/End<a href="#pattern-1-overlapping-intervals-sorting-by-startend" class="hash-link" aria-label="Direct link to PATTERN 1: Overlapping Intervals Sorting by Start/End" title="Direct link to PATTERN 1: Overlapping Intervals Sorting by Start/End" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-33">🔥 Standard<a href="#-standard-33" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/merge-intervals/" target="_blank" rel="noopener noreferrer" class="">Merge Intervals — LeetCode 56</a></li>
+<li class=""><a href="https://leetcode.com/problems/insert-interval/" target="_blank" rel="noopener noreferrer" class="">Insert Interval — LeetCode 57</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-32">🧩 Practice<a href="#-practice-32" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/non-overlapping-intervals/" target="_blank" rel="noopener noreferrer" class="">Non-overlapping Intervals — LeetCode 435</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/" target="_blank" rel="noopener noreferrer" class="">Minimum Number of Arrows to Burst Balloons — LeetCode 452</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-24">🌀 Niche<a href="#-niche-24" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/my-calendar-ii/" target="_blank" rel="noopener noreferrer" class="">My Calendar II — LeetCode 731</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-2-custom-sorting--comparators">PATTERN 2: Custom Sorting &amp; Comparators<a href="#pattern-2-custom-sorting--comparators" class="hash-link" aria-label="Direct link to PATTERN 2: Custom Sorting &amp; Comparators" title="Direct link to PATTERN 2: Custom Sorting &amp; Comparators" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-34">🔥 Standard<a href="#-standard-34" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/sort-characters-by-frequency/" target="_blank" rel="noopener noreferrer" class="">Sort Characters By Frequency — LeetCode 451</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-33">🧩 Practice<a href="#-practice-33" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/largest-number/" target="_blank" rel="noopener noreferrer" class="">Largest Number — LeetCode 179</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-25">🌀 Niche<a href="#-niche-25" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/custom-sort-string" target="_blank" rel="noopener noreferrer" class="">Custom Sort String — LeetCode 791</a></li>
+<li class=""><a href="https://leetcode.com/problems/queue-reconstruction-by-height/" target="_blank" rel="noopener noreferrer" class="">Queue Reconstruction by Height — LeetCode 406</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-9-strings">SECTION 9: Strings<a href="#section-9-strings" class="hash-link" aria-label="Direct link to SECTION 9: Strings" title="Direct link to SECTION 9: Strings" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-1-palindrome-properties--construction">PATTERN 1: Palindrome Properties &amp; Construction<a href="#pattern-1-palindrome-properties--construction" class="hash-link" aria-label="Direct link to PATTERN 1: Palindrome Properties &amp; Construction" title="Direct link to PATTERN 1: Palindrome Properties &amp; Construction" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-35">🔥 Standard<a href="#-standard-35" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/longest-palindrome" target="_blank" rel="noopener noreferrer" class="">Longest Palindrome — LeetCode 409</a></li>
+<li class=""><a href="https://leetcode.com/problems/palindromic-substrings" target="_blank" rel="noopener noreferrer" class="">Palindromic Substrings — LeetCode 647</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-34">🧩 Practice<a href="#-practice-34" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/palindrome-partitioning" target="_blank" rel="noopener noreferrer" class="">Palindrome Partitioning — LeetCode 131</a></li>
+<li class=""><a href="https://leetcode.com/problems/longest-palindromic-subsequence" target="_blank" rel="noopener noreferrer" class="">Longest Palindromic Subsequence — LeetCode 516</a></li>
+<li class=""><a href="https://leetcode.com/problems/break-a-palindrome" target="_blank" rel="noopener noreferrer" class="">Break a Palindrome — LeetCode 1328</a></li>
+<li class=""><a href="https://leetcode.com/problems/construct-k-palindrome-strings" target="_blank" rel="noopener noreferrer" class="">Construct K Palindrome Strings — LeetCode 1400</a></li>
+<li class=""><a href="https://leetcode.com/problems/remove-palindromic-subsequences" target="_blank" rel="noopener noreferrer" class="">Remove Palindromic Subsequences — LeetCode 1332</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-26">🌀 Niche<a href="#-niche-26" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/shortest-palindrome" target="_blank" rel="noopener noreferrer" class="">Shortest Palindrome — LeetCode 214</a></li>
+<li class=""><a href="https://leetcode.com/problems/find-the-closest-palindrome" target="_blank" rel="noopener noreferrer" class="">Find the Closest Palindrome — LeetCode 564</a></li>
+<li class=""><a href="https://leetcode.com/problems/longest-chunked-palindrome-decomposition" target="_blank" rel="noopener noreferrer" class="">Longest Chunked Palindrome Decomposition — LeetCode 1147</a></li>
+<li class=""><a href="https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome" target="_blank" rel="noopener noreferrer" class="">Minimum Insertion Steps to Make a String Palindrome — LeetCode 1312</a></li>
+<li class=""><a href="https://leetcode.com/problems/split-two-strings-to-make-palindrome" target="_blank" rel="noopener noreferrer" class="">Split Two Strings to Make Palindrome — LeetCode 1616</a></li>
+<li class=""><a href="https://leetcode.com/problems/can-make-palindrome-from-substring" target="_blank" rel="noopener noreferrer" class="">Can Make Palindrome from Substring — LeetCode 1177</a></li>
+<li class=""><a href="https://leetcode.com/problems/palindrome-partitioning-ii" target="_blank" rel="noopener noreferrer" class="">Palindrome Partitioning II — LeetCode 132</a></li>
+<li class=""><a href="https://leetcode.com/problems/palindrome-partitioning-iii" target="_blank" rel="noopener noreferrer" class="">Palindrome Partitioning III — LeetCode 1278</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-2-string-validation--equivalence">PATTERN 2: String Validation &amp; Equivalence<a href="#pattern-2-string-validation--equivalence" class="hash-link" aria-label="Direct link to PATTERN 2: String Validation &amp; Equivalence" title="Direct link to PATTERN 2: String Validation &amp; Equivalence" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-36">🔥 Standard<a href="#-standard-36" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent" target="_blank" rel="noopener noreferrer" class="">Check If Two String Arrays are Equivalent — LeetCode 1662</a></li>
+<li class=""><a href="https://leetcode.com/problems/buddy-strings" target="_blank" rel="noopener noreferrer" class="">Buddy Strings — LeetCode 859</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-35">🧩 Practice<a href="#-practice-35" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/determine-if-two-strings-are-close" target="_blank" rel="noopener noreferrer" class="">Determine if Two Strings Are Close — LeetCode 1657</a></li>
+<li class=""><a href="https://leetcode.com/problems/check-if-word-equals-summation-of-two-words" target="_blank" rel="noopener noreferrer" class="">Check if Word Equals Summation of Two Words — LeetCode 1880</a></li>
+<li class=""><a href="https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal" target="_blank" rel="noopener noreferrer" class="">Check if One String Swap Can Make Strings Equal — LeetCode 1790</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-27">🌀 Niche<a href="#-niche-27" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/additive-number" target="_blank" rel="noopener noreferrer" class="">Additive Number — LeetCode 306</a></li>
+<li class=""><a href="https://leetcode.com/problems/check-if-a-string-can-break-another-string" target="_blank" rel="noopener noreferrer" class="">Check If a String Can Break Another String — LeetCode 1433</a></li>
+<li class=""><a href="https://leetcode.com/problems/increasing-decreasing-string" target="_blank" rel="noopener noreferrer" class="">Increasing Decreasing String — LeetCode 1370</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern-3-longest--shortest-properties-non-sliding-window">PATTERN 3: Longest &amp; Shortest Properties Non-Sliding Window<a href="#pattern-3-longest--shortest-properties-non-sliding-window" class="hash-link" aria-label="Direct link to PATTERN 3: Longest &amp; Shortest Properties Non-Sliding Window" title="Direct link to PATTERN 3: Longest &amp; Shortest Properties Non-Sliding Window" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-standard-37">🔥 Standard<a href="#-standard-37" class="hash-link" aria-label="Direct link to 🔥 Standard" title="Direct link to 🔥 Standard" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/largest-odd-number-in-string" target="_blank" rel="noopener noreferrer" class="">Largest Odd Number in String — LeetCode 1903</a></li>
+<li class=""><a href="https://leetcode.com/problems/largest-substring-between-two-equal-characters" target="_blank" rel="noopener noreferrer" class="">Largest Substring Between Two Equal Characters — LeetCode 1624</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-practice-36">🧩 Practice<a href="#-practice-36" class="hash-link" aria-label="Direct link to 🧩 Practice" title="Direct link to 🧩 Practice" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/longest-happy-string" target="_blank" rel="noopener noreferrer" class="">Longest Happy String — LeetCode 1405</a></li>
+<li class=""><a href="https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters" target="_blank" rel="noopener noreferrer" class="">Maximum Length of a Concatenated String with Unique Characters — LeetCode 1239</a></li>
+<li class=""><a href="https://leetcode.com/problems/longest-string-chain" target="_blank" rel="noopener noreferrer" class="">Longest String Chain — LeetCode 1048</a></li>
+<li class=""><a href="https://leetcode.com/problems/longest-common-subsequence" target="_blank" rel="noopener noreferrer" class="">Longest Common Subsequence — LeetCode 1143</a></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-niche-28">🌀 Niche<a href="#-niche-28" class="hash-link" aria-label="Direct link to 🌀 Niche" title="Direct link to 🌀 Niche" translate="no">​</a></h4>
+<ul>
+<li class=""><a href="https://leetcode.com/problems/longest-happy-prefix" target="_blank" rel="noopener noreferrer" class="">Longest Happy Prefix — LeetCode 1392</a></li>
+<li class=""><a href="https://leetcode.com/problems/longest-duplicate-substring" target="_blank" rel="noopener noreferrer" class="">Longest Duplicate Substring — LeetCode 1044</a></li>
+</ul>
+<h1>TOTAL: 250+ Problems</h1></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--next" href="/proiectarea-algoritmilor/data_structures/theory_roadmap"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">📖 Theory Roadmap: Data Structures</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#section-1-sets-and-arrays" class="table-of-contents__link toc-highlight">SECTION 1: Sets and Arrays</a><ul><li><a href="#pattern-1-hashset-core-operations" class="table-of-contents__link toc-highlight">PATTERN 1: HashSet Core Operations</a></li><li><a href="#pattern-2-cyclic-sort-index-based-placement" class="table-of-contents__link toc-highlight">PATTERN 2: Cyclic Sort Index-Based Placement</a></li><li><a href="#pattern-3-matrix-manipulation--traversal" class="table-of-contents__link toc-highlight">PATTERN 3: Matrix Manipulation &amp; Traversal</a></li><li><a href="#pattern-4-array-intervals-sorting" class="table-of-contents__link toc-highlight">PATTERN 4: Array Intervals Sorting</a></li><li><a href="#pattern-5-in-place-reversal--swapping" class="table-of-contents__link toc-highlight">PATTERN 5: In-Place Reversal &amp; Swapping</a></li></ul></li><li><a href="#section-2-linked-list" class="table-of-contents__link toc-highlight">SECTION 2: Linked List</a><ul><li><a href="#pattern-1-in-place-reversal" class="table-of-contents__link toc-highlight">PATTERN 1: In-Place Reversal</a></li><li><a href="#pattern-2-fast--slow-pointers-cycle--middle" class="table-of-contents__link toc-highlight">PATTERN 2: Fast &amp; Slow Pointers Cycle &amp; Middle</a></li><li><a href="#pattern-3-dummy-nodes--node-deletion" class="table-of-contents__link toc-highlight">PATTERN 3: Dummy Nodes &amp; Node Deletion</a></li><li><a href="#pattern-4-reordering--advanced-manipulation" class="table-of-contents__link toc-highlight">PATTERN 4: Reordering &amp; Advanced Manipulation</a></li><li><a href="#pattern-5-merging--multiple-lists" class="table-of-contents__link toc-highlight">PATTERN 5: Merging &amp; Multiple Lists</a></li></ul></li><li><a href="#section-3-stacks--queues" class="table-of-contents__link toc-highlight">SECTION 3: Stacks &amp; Queues</a><ul><li><a href="#pattern-2-monotonic-stack-next-greater--smaller" class="table-of-contents__link toc-highlight">PATTERN 2: Monotonic Stack Next Greater / Smaller</a></li><li><a href="#pattern-3-monotonic-stack-subarray-optimization--histograms" class="table-of-contents__link toc-highlight">PATTERN 3: Monotonic Stack Subarray Optimization &amp; Histograms</a></li><li><a href="#pattern-4-monotonic-queue--deque" class="table-of-contents__link toc-highlight">PATTERN 4: Monotonic Queue &amp; Deque</a></li><li><a href="#pattern-5-object-design-stacks--queues" class="table-of-contents__link toc-highlight">PATTERN 5: Object Design Stacks &amp; Queues</a></li></ul></li><li><a href="#section-4-heaps---priority-queues" class="table-of-contents__link toc-highlight">SECTION 4: Heaps - Priority Queues</a><ul><li><a href="#pattern-1-top-k-pattern" class="table-of-contents__link toc-highlight">PATTERN 1: Top K Pattern</a></li><li><a href="#pattern-2-merge-k-sorted-pattern" class="table-of-contents__link toc-highlight">PATTERN 2: Merge K Sorted Pattern</a></li><li><a href="#pattern-3-two-heaps-pattern" class="table-of-contents__link toc-highlight">PATTERN 3: Two Heaps Pattern</a></li><li><a href="#pattern-4-minimum-number--heap-simulation" class="table-of-contents__link toc-highlight">PATTERN 4: Minimum Number &amp; Heap Simulation</a></li></ul></li><li><a href="#section-5-trees" class="table-of-contents__link toc-highlight">SECTION 5: Trees</a><ul><li><a href="#pattern-1-tree-dfs-preorder--inorder--postorder" class="table-of-contents__link toc-highlight">PATTERN 1: Tree DFS Preorder / Inorder / Postorder</a></li><li><a href="#pattern-2-level-order-traversal-bfs" class="table-of-contents__link toc-highlight">PATTERN 2: Level Order Traversal BFS</a></li><li><a href="#pattern-3-tree-construction--restructuring" class="table-of-contents__link toc-highlight">PATTERN 3: Tree Construction &amp; Restructuring</a></li><li><a href="#pattern-4-tree-properties--comparison-object-level" class="table-of-contents__link toc-highlight">PATTERN 4: Tree Properties &amp; Comparison Object Level</a></li><li><a href="#pattern-5-root-to-leaf-paths--sums" class="table-of-contents__link toc-highlight">PATTERN 5: Root to Leaf Paths &amp; Sums</a></li><li><a href="#pattern-6-ancestry--lowest-common-ancestor-lca" class="table-of-contents__link toc-highlight">PATTERN 6: Ancestry &amp; Lowest Common Ancestor LCA</a></li><li><a href="#pattern-7-tree-dp-distances--complex-paths" class="table-of-contents__link toc-highlight">PATTERN 7: Tree DP, Distances &amp; Complex Paths</a></li><li><a href="#pattern-8-binary-search-tree-bst-operations" class="table-of-contents__link toc-highlight">PATTERN 8: Binary Search Tree BST Operations</a></li><li><a href="#pattern-9-trie-prefix-tree" class="table-of-contents__link toc-highlight">PATTERN 9: Trie Prefix Tree</a></li><li><a href="#pattern-10-segment-tree-array-mapping-on-tree-logic" class="table-of-contents__link toc-highlight">PATTERN 10: Segment Tree Array mapping on Tree logic</a></li></ul></li><li><a href="#section-6-graphs" class="table-of-contents__link toc-highlight">SECTION 6: Graphs</a><ul><li><a href="#pattern-1-graph-design--object-representation" class="table-of-contents__link toc-highlight">PATTERN 1: Graph Design &amp; Object Representation</a></li></ul></li><li><a href="#section-7-hashtables" class="table-of-contents__link toc-highlight">SECTION 7: HashTables</a><ul><li><a href="#pattern-1-frequency-counting--basic-mapping" class="table-of-contents__link toc-highlight">PATTERN 1: Frequency Counting &amp; Basic Mapping</a></li><li><a href="#pattern-2-grouping--advanced-mapping" class="table-of-contents__link toc-highlight">PATTERN 2: Grouping &amp; Advanced Mapping</a></li><li><a href="#pattern-3-pairs--tuple-sums-non-slidingnon-prefix" class="table-of-contents__link toc-highlight">PATTERN 3: Pairs &amp; Tuple Sums Non-Sliding/Non-Prefix</a></li><li><a href="#pattern-4-design-data-structure-hash-maps--caches" class="table-of-contents__link toc-highlight">PATTERN 4: Design Data Structure Hash Maps &amp; Caches</a></li></ul></li><li><a href="#section-8-sorting" class="table-of-contents__link toc-highlight">SECTION 8: Sorting</a><ul><li><a href="#pattern-1-overlapping-intervals-sorting-by-startend" class="table-of-contents__link toc-highlight">PATTERN 1: Overlapping Intervals Sorting by Start/End</a></li><li><a href="#pattern-2-custom-sorting--comparators" class="table-of-contents__link toc-highlight">PATTERN 2: Custom Sorting &amp; Comparators</a></li></ul></li><li><a href="#section-9-strings" class="table-of-contents__link toc-highlight">SECTION 9: Strings</a><ul><li><a href="#pattern-1-palindrome-properties--construction" class="table-of-contents__link toc-highlight">PATTERN 1: Palindrome Properties &amp; Construction</a></li><li><a href="#pattern-2-string-validation--equivalence" class="table-of-contents__link toc-highlight">PATTERN 2: String Validation &amp; Equivalence</a></li><li><a href="#pattern-3-longest--shortest-properties-non-sliding-window" class="table-of-contents__link toc-highlight">PATTERN 3: Longest &amp; Shortest Properties Non-Sliding Window</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Algorithmic Handbook. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
